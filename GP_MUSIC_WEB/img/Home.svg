@@ -1,0 +1,20 @@
+<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="28" height="28" fill="#1E1E1E"/>
+<g id="Home page" clip-path="url(#clip0_0_1)">
+<rect width="1440" height="664" transform="translate(-611 -26)" fill="#155C74"/>
+<g id="Navigation Bar">
+<rect width="1440" height="80" transform="translate(-611 -26)" fill="#04364A"/>
+<g id="home-btn">
+<g id="Home">
+<path id="Rectangle 1" d="M5.83325 14.8861C5.83325 13.3021 5.83325 12.5101 6.15346 11.8139C6.47366 11.1177 7.07501 10.6022 8.27771 9.57134L9.44438 8.57134C11.6182 6.70803 12.7052 5.77637 13.9999 5.77637C15.2947 5.77637 16.3816 6.70803 18.5555 8.57134L19.7221 9.57134C20.9248 10.6022 21.5262 11.1177 21.8464 11.8139C22.1666 12.5101 22.1666 13.3021 22.1666 14.8861V19.8333C22.1666 22.0331 22.1666 23.1331 21.4832 23.8165C20.7998 24.4999 19.6998 24.4999 17.4999 24.4999H10.4999C8.30003 24.4999 7.20009 24.4999 6.51667 23.8165C5.83325 23.1331 5.83325 22.0331 5.83325 19.8333V14.8861Z" stroke="#DAFFFB" stroke-width="2"/>
+<path id="Vector 3" d="M16.9166 24.5V18.5C16.9166 17.9477 16.4689 17.5 15.9166 17.5H12.0833C11.531 17.5 11.0833 17.9477 11.0833 18.5V24.5" stroke="#DAFFFB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_0_1">
+<rect width="1440" height="664" fill="white" transform="translate(-611 -26)"/>
+</clipPath>
+</defs>
+</svg>
