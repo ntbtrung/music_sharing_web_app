@@ -21,7 +21,7 @@ fileInput.onchange = ({target}) => {
 
 function uploadFile(name){
     let xhr = new XMLHttpRequest(); //creating new xml http request
-    xhr.open("POST", "php/upload.php"); //sending post request to upload.php file
+    xhr.open("POST", "php/upload with progress bar.php"); //sending post request to upload.php file
     xhr.upload.addEventListener("progress", ({loaded, total}) => { //adding event listener to track progress
         let fileLoaded = Math.floor((loaded / total) * 100); //getting percentage of loaded file
         let fileTotal = Math.floor(total / 1000); //getting total size of file in KB from Bytes
