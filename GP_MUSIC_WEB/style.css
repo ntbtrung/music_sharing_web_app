@@ -2,8 +2,14 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
     transition: 0.5s;
+}
+
+html,
+body {
+    overflow-wrap: break-word;
 }
 
 /*--------------------------------------HOME PAGE---------------------*/
@@ -12,19 +18,17 @@
     float: left;
     flex-direction: row;
     justify-content: center;
-    width: 1440px;
+    width: 100%;
 }
 
 /* ------edit navigation bar for ALL PAGE */
 .navigation-bar {
-    position: absolute;
-    width: 1440px;
+    position: relative;
+    width: 100%;
     height: 80px;
     top: 0;
     left: 0;
     background-color: #04364a;
-    border: 1px solid black;
-    border-collapse: collapse;
 }
 
 .logo {
@@ -67,10 +71,11 @@
     font-family: "Poppins-Regular", Helvetica;
     background-color: #176b87;
     font-weight: 400;
+    outline: none;
 }
 
 .search-place:focus {
-    border: 0px solid 176b87;
+    border: none;
 }
 
 .home-icon {
