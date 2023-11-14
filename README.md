@@ -1,1 +1,1 @@
-# music_sharing_web_app
+# Music sharing web application
