@@ -1,4 +1,6 @@
 /* all page */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 * {
     margin: 0px;
     padding: 0px;
@@ -45,12 +47,15 @@
 }
 
 .search-place {
+    background-color: #176B87;
+    border: 0px;
+    overflow: hidden;
+    font-family: "Poppins";
+    width: 100%;
     outline: none;
-    background-color: #176b87;
-    width: 80%;
-    border: none;
-    color: #DAFFFB80;
-
+    font-weight: 400;
+    color: #dafffb80;
+    font-size: 13px;
 }
 
 /*  colum 2 in nav-bar  */
@@ -60,44 +65,33 @@
     align-items: center;
 }
 
-.home-icon {
-    width: 28px;
-    height: 28px;
-    cursor: pointer;
-}
-
-.home-icon:hover {
+.nav-btn {
     width: 80px;
     height: 40px;
-    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 10px;
 }
 
-.darhboard-icon {
+.nav-btn:hover {
+    width: 80px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color: #155c74;
+
+}
+
+.nav-icon {
     width: 28px;
     height: 28px;
     cursor: pointer;
+
 }
 
-.darhboard-icon:hover {
-    width: 80px;
-    height: 40px;
-    border: 1px solid black;
-    border-radius: 10px;
-}
-
-.bell-icon {
-    width: 28px;
-    height: 28px;
-    cursor: pointer;
-}
-
-.bell-icon:hover {
-    width: 80px;
-    height: 40px;
-    border: 1px solid black;
-    border-radius: 10px;
-}
 
 /*  colum 3 in nav-bar  */
 .navigation-bar3 {
@@ -187,7 +181,7 @@
     background-color: #176B87;
     border: 0px;
     overflow: hidden;
-    font-family: Poppins;
+    font-family: "Poppins";
     width: 465px;
     outline: none;
 }
@@ -223,18 +217,15 @@
 }
 
 .post-icon {
-    width: 24px;
-    height: 24px;
-    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
 }
 
 .post-text {
-    width: 64px;
-    height: 20px;
     flex-shrink: 0;
     color: #DAFFFB;
-    font-family: Poppins;
-    font-size: 13px;
+    font-family: "Poppins";
+    font-size: 11px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
@@ -305,7 +296,7 @@
 }
 
 .frame-title {
-    font-family: "Poppins-SemiBold", Helvetica;
+    font-family: "Poppins";
     font-weight: 600;
     color: #dafffb;
     font-size: 20px;
@@ -375,7 +366,7 @@
 .video-item-title {
     width: 177px;
     color: #DAFFFB;
-    font-family: "Poppins-SemiBold", Helvetica;
+    font-family: "Poppins";
     font-size: 16px;
     font-style: normal;
     font-weight: 600;
@@ -386,7 +377,7 @@
 .video-item-footer {
     width: 177px;
     color: #DAFFFB;
-    font-family: "Poppins-Regular", Helvetica;
+    font-family: "Poppins";
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
@@ -425,7 +416,7 @@
 }
 
 .chat-title {
-    font-family: "Poppins-SemiBold", Helvetica;
+    font-family: "Poppins";
     font-weight: 600;
     color: #dafffb;
     font-size: 24px;
@@ -499,7 +490,7 @@
 
 .name-title {
     color: #DAFFFB;
-    font-family: Poppins;
+    font-family: "Poppins";
     font-size: 13px;
     font-style: normal;
     font-weight: 600;
@@ -508,7 +499,7 @@
 
 .message-title {
     color: #DAFFFB;
-    font-family: Poppins;
+    font-family: "Poppins";
     font-size: 13px;
     font-style: normal;
     font-weight: 400;
@@ -580,7 +571,7 @@
 }
 
 .upload-title {
-    font-family: "Poppins-Medium", Helvetica;
+    font-family: "Poppins";
     font-weight: 500;
     color: #04364a;
     font-size: 12px;
@@ -618,7 +609,7 @@
 }
 
 .share-title {
-    font-family: "Poppins-Medium", Helvetica;
+    font-family: "Poppins";
     font-weight: 500;
     color: #04364a;
     font-size: 13px;
@@ -643,7 +634,7 @@
 
 .menu-name {
     text-align: center;
-    font-family: "Poppins-Medium", Helvetica;
+    font-family: "Poppins";
     font-weight: 400;
     font-size: 15px;
     letter-spacing: 0;
@@ -653,7 +644,7 @@
 
 .menu-name:hover {
     text-align: center;
-    font-family: "Poppins-Medium", Helvetica;
+    font-family: "Poppins";
     font-weight: 500;
     color: #00ffed;
     font-size: 15px;
@@ -675,7 +666,7 @@
 }
 
 .noti-message-1 {
-    font-family: "Poppins-Medium", Helvetica;
+    font-family: "Poppins";
     font-weight: 500;
     color: #dafffb;
     font-size: 24px;
@@ -684,7 +675,7 @@
 }
 
 .noti-message-2 {
-    font-family: "Poppins-Regular", Helvetica;
+    font-family: "Poppins";
     font-weight: 400;
     color: #00ffed;
     font-size: 15px;
@@ -698,7 +689,7 @@
     height: 30px;
     background-color: #00ffed;
     border-radius: 25px;
-    font-family: "Poppins-Medium", Helvetica;
+    font-family: "Poppins";
     font-weight: 500;
     color: #04364a;
     font-size: 13px;
@@ -725,7 +716,7 @@
 }
 
 .info-title {
-    font-family: "Poppins-Medium", Helvetica;
+    font-family: "Poppins";
     font-weight: 500;
     color: #dafffb;
     font-size: 12px;
@@ -735,7 +726,7 @@
 }
 
 .info-number {
-    font-family: "Poppins-Medium", Helvetica;
+    font-family: "Poppins";
     font-weight: 500;
     color: #dafffb;
     font-size: 20px;
