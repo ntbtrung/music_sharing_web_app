@@ -82,7 +82,7 @@
     border-radius: 10px;
     background-color: #155c74;
 }
-.nav-btn-1:active {
+.active {
     width: 80px;
     height: 40px;
     display: flex;
@@ -90,6 +90,7 @@
     align-items: center;
     border-radius: 10px;
     background-color: #155c74;
+    border: 1px solid white;
 }
 .nav-icon {
     width: 28px;
