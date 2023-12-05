@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <div class="login_page">
+        <body>
+            <!-- Login Section -->
+            <section id="login" class="container mt-5">
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <h2>Login</h2>
+                        <form id="loginForm">
+                            <d iv class="form-group">
+                                <label for="email">Email:</label>
+                                <input type="email" class="form-control" id="email" placeholder="Enter email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password:</label>
+                                <input type="password" class="form-control" id="password" placeholder="Enter password" required>
+                            </div>
+                            <div class="form-group form-check">
+                               <input type="checkbox" class="form-check-input" id="rememberMe">
+                                <label class="form-check-label" for="rememberMe">Remember me</label>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Login</button>
+                        </form>
+                        <div class="text-center mt-3">
+                            <a href="#" id="forgotPasswordLink">Forgot Password?</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+         
+            <!-- Reset Password Section -->
+            <section id="resetPassword" class="container mt-5 d-none">
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <h2>Reset Password</h2>
+                        <form id="resetPasswordForm">
+                            <div class="form-group">
+                                <label for="resetEmail">Email:</label>
+                                <input type="email" class="form-control" id="resetEmail" placeholder="Enter email" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Reset Password</button>
+                        </form>
+                        <div class="text-center mt-3">
+                            <a href="#" id="backToLoginLink">Back to Login</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+         
+            <!-- Bootstrap & jQuery JS -->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+            <script>
+                $(document).ready(function() {
+                    // Show reset password form when "Forgot Password?" link is clicked
+                    $('#forgotPasswordLink').click(function(e) {
+                        e.preventDefault();
+                        $('#login').addClass('d-none');
+                        $('#resetPassword').removeClass('d-none');
+                    });
+         
+                    // Show login form when "Back to Login" link is clicked
+                    $('#backToLoginLink').click(function(e) {
+                        e.preventDefault();
+                        $('#resetPassword').addClass('d-none');
+                        $('#login').removeClass('d-none');
+                    });
+         
+                    // Login form submission
+                    $('#loginForm').submit(function(e) {
+                        e.preventDefault();
+                        // Perform login validation logic here
+                        alert('Login successful!');
+                    });
+         
+                    // Reset password form submission
+                    $('#resetPasswordForm').submit(function(e) {
+                        e.preventDefault();
+                        // Perform reset password logic here
+                        alert('Password reset email sent!');
+                    });
+                });
+            </script>
+        </body>
+    </div>
+</body>
+</html>
