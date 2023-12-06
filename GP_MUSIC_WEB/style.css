@@ -1,0 +1,796 @@
+/* all page */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+/* ------edit navigation bar for ALL PAGE */
+/*-----------------------------------------*/
+
+.navigation-bar {
+    width: 100%;
+    height: 80px;
+    background-color: #04364a;
+}
+
+/*  colum 1 in nav-bar  */
+.navigation-bar1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: fit-content;
+    height: 18px;
+}
+
+.search-box {
+    width: fit-content;
+    height: 42px;
+    border-radius: 20px;
+    background-color: #176b87;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-icon {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.search-place {
+    background-color: #176B87;
+    border: 0px;
+    overflow: hidden;
+    font-family: "Poppins";
+    width: 100%;
+    outline: none;
+    font-weight: 400;
+    color: #dafffb80;
+    font-size: 13px;
+}
+
+/*  colum 2 in nav-bar  */
+.navigation-bar2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-btn-1 {
+    width: 80px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+.nav-btn-1:hover {
+    width: 80px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color: #155c74;
+}
+.active {
+    width: 80px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color: #155c74;
+    border: 1px solid white;
+}
+.nav-icon {
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+}
+
+/*  colum 3 in nav-bar  */
+.navigation-bar3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-btn-2 {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-icon-2 {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.nav-icon-3 {
+    width: 54px;
+    height: 54px;
+    cursor: pointer;
+}
+
+
+/*--------------------------------------LOG IN PAGE---------------------*/
+/*------------------------------------------------------------------------*/
+
+.login-container {
+    width: 300px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  .error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  
+
+
+
+
+
+
+
+
+
+
+/*--------------------------------------HOME PAGE---------------------*/
+/*------------------------------------------------------------------------*/
+
+.home-page {
+    background-color: #155c74;
+    width: 100%;
+    height: fit-content;
+}
+
+/* ------edit body for HOME PAGE */
+.page-body-home {
+    background-color: #155c74;
+    width: 100%;
+    height: fit-content;
+}
+
+/*left colum for HOME*/
+.left-home {
+    height: 800px;
+    /* chi dung de show*/
+    /* height: fit-content; */
+    background-color: #04364a;
+
+}
+
+/*feed colum for HOME*/
+.feed-home {
+    height: 800px;
+    /* chi dung de show*/
+    /* height: fit-content; */
+    background-color: #155c74;
+
+}
+
+.status-frame {
+    height: max-content;
+    background-color: #04364a;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.post-box-1 {
+    display: flex;
+    height: 2.5em;
+    overflow: hidden;
+    padding: 0.5em;
+    border-radius: 20px;
+    background: #176B87;
+    align-items: center;
+    gap: 10px;
+    margin: 1em 1em 2em 1em;
+}
+
+.post-avatar {
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+}
+
+.post-input {
+    background-color: #176B87;
+    border: 0px;
+    overflow: hidden;
+    font-family: "Poppins";
+    width: 465px;
+    outline: none;
+}
+
+.post-box-2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    border-top: 1px solid rgb(255, 255, 255, 0.2);
+    margin: 0em 1em 1em 1em;
+    cursor: pointer;
+}
+
+.btn-post {
+    height: 36px;
+    overflow: hidden;
+    border-radius: 8px;
+    background: #04364A;
+    flex-shrink: 0;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.btn-post:hover {
+    height: 36px;
+    overflow: hidden;
+    border-radius: 8px;
+    background: #176B87;
+    flex-shrink: 0;
+}
+
+.post-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.post-text {
+    flex-shrink: 0;
+    color: #DAFFFB;
+    font-family: "Poppins";
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    padding: 3px 5px;
+}
+
+.post-frame {
+    height: 500px;
+    /* chi dung de show*/
+    /* height: max-content; */
+    background-color: #04364a;
+    border-radius: 10px;
+    overflow: hidden;
+
+}
+
+/*right colum for HOME*/
+.right-home {
+    height: 800px;
+    /* chi dung de show*/
+    /* height: fit-content; */
+    background-color: #04364a;
+
+}
+
+
+
+
+
+/*--------------------------------------LIBRARY PAGE ---------------------*/
+/*------------------------------------------------------------------------*/
+
+.library-page {
+    background-color: #155c74;
+    width: 100%;
+    height: fit-content;
+}
+
+/* ------edit body for LIBRARY PAGE */
+.page-body-library {
+    background-color: #155c74;
+    width: 100%;
+    height: fit-content;
+}
+
+/*left colum for LIBRARY*/
+.left-library {
+    height: 1000px;
+    /* chi dung de show*/
+    /* height: fit-content; */
+    background-color: #04364a;
+
+}
+
+/*feed colum for LIBRARY*/
+.feed-library {
+    height: 800px;
+    /* chi dung de show*/
+    /* height: fit-content; */
+    background-color: #155c74;
+
+}
+
+.frame-libraby {
+    margin: 30px 35px 0 35px;
+    display: flex;
+    flex-direction: column;
+}
+
+.frame-title {
+    font-family: "Poppins";
+    font-weight: 600;
+    color: #dafffb;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.frame-line {
+    display: flex;
+    overflow: hidden;
+    align-items: flex-start;
+    gap: 15px;
+    margin: 20px 0 10px 0;
+}
+
+/* item small*/
+.playlist-items {
+    width: 177px;
+    height: 232px;
+    position: relative;
+}
+
+.playlist-items:hover {
+    width: 185px;
+    height: 232px;
+    margin-right: 20px;
+    margin-left: 20px;
+    border: 1px solid white;
+    background: #04364A;
+    border-radius: 10px;
+    transition: 0.7s;
+}
+
+.playlist-item-block {
+    width: 177px;
+    height: 177px;
+    border-radius: 10px;
+    background: #04364A;
+}
+
+.video-items {
+    width: 310px;
+    height: 232px;
+    position: relative;
+}
+
+/*items bigger */
+.video-items:hover {
+    width: 315px;
+    height: 232px;
+    margin-right: 20px;
+    margin-left: 20px;
+    border: 1px solid white;
+    background: #04364A;
+    border-radius: 10px;
+    transition: 0.7s;
+}
+
+.video-item-block {
+    width: 310px;
+    height: 177px;
+    border-radius: 10px;
+    background: #04364A;
+}
+
+.playlist-item-title,
+.video-item-title {
+    width: 177px;
+    color: #DAFFFB;
+    font-family: "Poppins";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.playlist-item-footer,
+.video-item-footer {
+    width: 177px;
+    color: #DAFFFB;
+    font-family: "Poppins";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+
+
+/*--------------------------------------CHAT PAGE ---------------------*/
+/*------------------------------------------------------------------------*/
+
+.chat-page {
+    background-color: #155c74;
+    width: 100%;
+    height: fit-content;
+}
+
+/* ------edit body for CHAT PAGE */
+.page-body-chat {
+    background-color: #155c74;
+    width: 100%;
+    height: fit-content;
+}
+
+/*left colum for LIBRARY*/
+.left-chat {
+    height: 1000px;
+    /* chi dung de show*/
+    /* height: fit-content; */
+    background-color: #04364a;
+
+}
+
+.search-frame-chat-1 {
+    justify-content: space-between;
+}
+
+.chat-title {
+    font-family: "Poppins";
+    font-weight: 600;
+    color: #dafffb;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.chat-icon {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chat-icon:hover {
+    width: 35px;
+    height: 35px;
+    background-color: #155c74;
+    border-radius: 50%;
+    justify-content: center;
+
+}
+
+.search-frame-chat-2 {
+    display: inline-flex;
+    height: 40px;
+    overflow: hidden;
+    border-radius: 20px;
+    background: #176B87;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+}
+
+.search-box-chat {
+    outline: none;
+    background-color: #176b87;
+    width: 80%;
+    border: none;
+    color: #DAFFFB80;
+}
+
+.show-frame-chat {
+    height: 500px;
+    overflow-y: scroll;
+}
+
+.show-chat-items {
+    display: flex;
+    border-radius: 10px;
+}
+
+.show-chat-items:hover {
+    display: flex;
+    border-radius: 10px;
+    background: #176B87;
+}
+
+.avatar-icon {
+    display: block;
+    padding: 10px;
+}
+
+.main-message {
+    display: block;
+    margin: 15px;
+    padding: 10px;
+}
+
+.name-title {
+    color: #DAFFFB;
+    font-family: "Poppins";
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.message-title {
+    color: #DAFFFB;
+    font-family: "Poppins";
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+
+
+
+
+
+
+/*--------------------------------------PROFILE PAGE ---------------------*/
+/*------------------------------------------------------------------------*/
+
+
+.profile-page {
+    background-color: #155c74;
+    width: 100%;
+    height: fit-content;
+
+}
+
+.page-body-profile {
+    background-color: #155c74;
+    width: 100%;
+    height: fit-content;
+}
+
+.left-profile {
+    height: 1000px;
+    /* chi dung de show*/
+    /* height: fit-content; */
+    background-color: #155c74;
+
+}
+
+.feed-profile {
+    height: 1000px;
+    background-color: #155c74;
+
+}
+
+.profile-frame {
+    width: 100%;
+    height: 30%;
+    background-color: #04364a;
+    border-radius: 0px 0px 10px 10px;
+    position: relative;
+}
+
+.upload-btn-avt {
+    position: absolute;
+    width: 20%;
+    height: 10%;
+    background-color: #dafffb99;
+    border-radius: 8px;
+    margin: 5% 0% 0% 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.upload-icon {
+    width: 15%;
+    height: 100%;
+    margin: 0% 3% 0% 3%
+}
+
+.upload-title {
+    font-family: "Poppins";
+    font-weight: 500;
+    color: #04364a;
+    font-size: 12px;
+    margin: 0% 3% 0% 3%
+}
+
+.avt-icon {
+    margin: 6%;
+    width: 200px;
+    height: 200px;
+    background-color: #176b87;
+    border-radius: 50%;
+}
+
+.share-frame-btn {
+    flex-direction: row-reverse;
+
+}
+
+.share-btn {
+    height: 25px;
+    background-color: #dafffb99;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin: 1% 0 1% 1%;
+}
+
+.share-icon {
+    width: 25%;
+    height: 100%;
+    margin: 0% 3% 0% 3%
+}
+
+.share-title {
+    font-family: "Poppins";
+    font-weight: 500;
+    color: #04364a;
+    font-size: 13px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.track-frame {
+    height: fit-content;
+    background-color: #176b87;
+    border-radius: 10px;
+}
+
+.menu-frame-bar {
+    background-color: #04364a;
+    height: 60px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-name {
+    text-align: center;
+    font-family: "Poppins";
+    font-weight: 400;
+    font-size: 15px;
+    letter-spacing: 0;
+    line-height: normal;
+    color: white;
+}
+
+.menu-name:hover {
+    text-align: center;
+    font-family: "Poppins";
+    font-weight: 500;
+    color: #00ffed;
+    font-size: 15px;
+    letter-spacing: 0;
+    line-height: normal;
+    cursor: pointer;
+}
+
+.track-frame-bar {
+    background-color: #176b87;
+    text-align: center;
+
+}
+
+.noti-track {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.noti-message-1 {
+    font-family: "Poppins";
+    font-weight: 500;
+    color: #dafffb;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.noti-message-2 {
+    font-family: "Poppins";
+    font-weight: 400;
+    color: #00ffed;
+    font-size: 15px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.upload-btn-track {
+    width: 20%;
+    text-align: center;
+    height: 30px;
+    background-color: #00ffed;
+    border-radius: 25px;
+    font-family: "Poppins";
+    font-weight: 500;
+    color: #04364a;
+    font-size: 13px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.info-frame {
+    height: 350px;
+    /* chi dung de show*/
+    /* height: fit-content; */
+    background-color: #176b87;
+    border-radius: 10px;
+    float: left;
+}
+
+.show-info {
+    height: 60px;
+    background-color: #04364a;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.info-title {
+    font-family: "Poppins";
+    font-weight: 500;
+    color: #dafffb;
+    font-size: 12px;
+    letter-spacing: 0;
+    line-height: normal;
+    text-align: center;
+}
+
+.info-number {
+    font-family: "Poppins";
+    font-weight: 500;
+    color: #dafffb;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+    text-align: left;
+}
+
+.right-profile {
+    height: 1000px;
+    /* chi dung de show*/
+    /* height: fit-content; */
+    background-color: #155c74;
+
+}
