@@ -141,7 +141,9 @@
     min-height: 100%;
 }
 
-.login-container {
+.login-container, 
+.register-container, 
+.reset-password-container {
     position: absolute;
     top: 50%;
     left: 50%;
