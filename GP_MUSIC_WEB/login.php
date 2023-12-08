@@ -2,6 +2,8 @@
 
 @include 'config.php';
 
+session_start();
+
 if(isset($_POST['submit'])){
 
 $name = mysqli_real_escape_string($conn, $_POST['username']);
@@ -14,15 +16,10 @@ $select = " SELECT * FROM user_form WHERE email = '$email' && password = 'pass' 
 $result = mysqli_query($conn, $select);
 
 if(mysqli_num_rows($result) > 0){
-    $error[] = 'user already exist!';
-}else{
-    if($pass != $cpass){
-        $error[] = 'password do not match!';
-    }else{
-        $insert = "INSERT INTO user_form(name, email, password) VALUES('$name','$email','$pass')";
-        mysqli_query($conn, $insert);
-        header('location:login.php');
-    }
+    
+  $row = mysqli_fetch_array($result);
+
+  header('loaction:home.php')
 }
 
 };
