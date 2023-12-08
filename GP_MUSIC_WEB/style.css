@@ -201,13 +201,13 @@
     font-size: 25px;
 }
 
-.form-box .input-box {
+.form-box .input-box{
+    width: 340px;
     height: 50px;
     border-bottom: 2px solid#fff;
     margin: 30px 0;
     position: relative;
 }
-
 .input-box input {
     width: 100%;
     height: 100%;
@@ -228,8 +228,7 @@
     transition: .5s ease;
 }
 
-.input-box input:focus~label,
-.input-box input:valid~label {
+.input-box input:focus~ label{
     top: -5px;
 }
 
@@ -251,7 +250,7 @@
     text-decoration: underline;
 }
 
-.button {
+.button-login {
     width: 100%;
     height: 45px;
     outline: none;
@@ -260,7 +259,6 @@
     cursor: pointer;
     background-color: #dafffb99;
     font-size: 16px;
-    color: #fff;
     box-shadow: rgba(0, 0, 0, 0.4);
 }
 
@@ -270,13 +268,15 @@
     margin: 25px;
 }
 
-.create-account p a {
+.create-account p a,
+.create-account a {
     color: #fff;
     font-weight: 600px;
     text-decoration: none;
 }
 
-.create-account p a:hover {
+.create-account p a:hover,
+.create-account a:hover {
     color: #fff;
     text-decoration: underline;
 }
