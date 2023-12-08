@@ -492,9 +492,28 @@ button:hover {
 /*--------------------------------------NOTIFICATION PAGE ---------------------*/
 /*------------------------------------------------------------------------*/
 
+.noti-bg {
+    background-color: #155c74;
+    width: 100%;
+    height: fit-content;
+}
 
+.right-noti {
+    height: auto;
+    background-color: #155c74;
+}
 
+.main-noti {
+    height: auto;
+    background-color: #04364a;
+}
 
+.notification {
+    padding: 10px;
+    margin-bottom: 5px;
+    background-color: #0c485c;
+    color: #ffffff;
+}
 
 
 
@@ -633,7 +652,6 @@ button:hover {
     background-color: #155c74;
     width: 100%;
     height: fit-content;
-
 }
 
 .page-body-profile {
