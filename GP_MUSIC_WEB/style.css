@@ -495,7 +495,7 @@ button:hover {
 .noti-bg {
     background-color: #155c74;
     width: 100%;
-    height: fit-content;
+    height: 100vh;
 }
 
 .right-noti {
@@ -508,14 +508,23 @@ button:hover {
     background-color: #04364a;
 }
 
+.noti-title {
+    font-size: 70px;
+    color: #DAFFFB;
+}
+
 .notification {
+    border-radius: 10px;
     padding: 10px;
     margin-bottom: 5px;
     background-color: #0c485c;
     color: #ffffff;
 }
 
-
+.more-noti {
+    font-size: large;
+    color: #DAFFFB;
+}
 
 
 /*--------------------------------------CHAT PAGE ---------------------*/
