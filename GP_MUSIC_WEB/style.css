@@ -92,7 +92,7 @@
     align-items: center;
     border-radius: 10px;
     background-color: #155c74;
-    border: 1px solid white;
+    border: 1px solid black;
 }
 
 .nav-icon {
@@ -134,12 +134,27 @@
 /*------------------------------------------------------------------------*/
 
 #background-video {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
-}
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        width: auto;
+        height: auto;
+        object-fit: cover; 
+        
+    }
+
+    .video-container {
+        background-repeat:no-repeat ;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background-size: cover;
+    }
 
 .login-container, 
 .register-container, 
@@ -192,7 +207,14 @@ button:hover {
     text-decoration: underline;
 }
 
-
+.register-container form .error-msg {
+    margin: 10px;
+    display: block;
+    background: crimson;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 20px;
+}
 
 
 
@@ -201,7 +223,8 @@ button:hover {
 /*------------------------------------------------------------------------*/
 
 .home-page {
-    background-color: #155c74;
+    /* background-color: #155c74; */
+    background-image: linear-gradient(to right bottom, #176b87, #176883, #176580, #16637c, #166079, #145b74, #13576e, #115269, #0e4b61, #0a4459, #073d52, #04364a);
     width: 100%;
     height: fit-content;
 }

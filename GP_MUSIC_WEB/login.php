@@ -1,3 +1,34 @@
+<?php
+
+@include 'config.php';
+
+if(isset($_POST['submit'])){
+
+$name = mysqli_real_escape_string($conn, $_POST['username']);
+$email = mysqli_real_escape_string($conn, $_POST['email']);
+$pass = md5($_POST['password']);
+$cpass = md5($_POST['cpassword']);
+
+$select = " SELECT * FROM user_form WHERE email = '$email' && password = 'pass' ";
+
+$result = mysqli_query($conn, $select);
+
+if(mysqli_num_rows($result) > 0){
+    $error[] = 'user already exist!';
+}else{
+    if($pass != $cpass){
+        $error[] = 'password do not match!';
+    }else{
+        $insert = "INSERT INTO user_form(name, email, password) VALUES('$name','$email','$pass')";
+        mysqli_query($conn, $insert);
+        header('location:login.php');
+    }
+}
+
+};
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -30,23 +61,23 @@
   <div class="login-container">
     <form action="" method="post">
       <div class="form-group">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required>
-      </div>
-      <div class="form-group">
-        <label for="password">Password:</label><br>
-        <input type="password" id="password" name="password" required>
-      </div>
-      <div class="form-group">
-        <button type="submit">Login</button>
-      </div>
+        <label for="username">User name:</label>
+        <input type="text" id="username" name="username" required placeholder="Enter your username">
+    </div>
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required placeholder="Enter your password">
+  </div>
+  <div class="form-group">
+    <button type="submit" name="submit" value="login now">Log in</button>
+</div>
       <p id="error-message" class="error-message"></p>
     </form>
 
     <div class="additional-links">
-      <a href="resetpass.html">Forgot Password?</a>
+      <a href="resetpass.php">Forgot Password?</a>
       <span>|</span>
-      <a href="register.html">Sign Up</a>
+      <a href="register.php">Sign Up</a>
     </div>
   </div>
 

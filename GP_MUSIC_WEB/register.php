@@ -1,8 +1,40 @@
+<?php
+
+@include 'config.php';
+
+if(isset($_POST['submit'])){
+
+$name = mysqli_real_escape_string($conn, $_POST['username']);
+$email = mysqli_real_escape_string($conn, $_POST['email']);
+$pass = md5($_POST['password']);
+$cpass = md5($_POST['cpassword']);
+
+$select = " SELECT * FROM user_form WHERE email = '$email' && password = 'pass' ";
+
+$result = mysqli_query($conn, $select);
+
+if(mysqli_num_rows($result) > 0){
+    $error[] = 'user already exist!';
+}else{
+    if($pass != $cpass){
+        $error[] = 'password do not match!';
+    }else{
+        $insert = "INSERT INTO user_form(name, email, password) VALUES('$name','$email','$pass')";
+        mysqli_query($conn, $insert);
+        header('location:login.php');
+    }
+}
+
+};
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Log in</title>
     <link rel="stylesheet" href="style.css" />
@@ -18,14 +50,25 @@
 </head>
 
 <body>
+    <div class="video-container">
     <video autoplay muted loop id="background-video">
         <!-- background video -->
         <source src="assets/images/a-train.mp4" type="video/mp4">
         Your browser does not support the video tag.
-    </video>
-
-    <div class="register-container">
+      </video>
+      </div>
+      
+      <div class="register-container">
         <form action="" method="post">
+            <?php
+
+            if(isset($error)){
+                foreach($error as $error){
+                    echo '<span class="error-msg">'.$error.'</span>';
+                };
+            };
+
+            ?>
             <div class="form-group">
                 <label for="username">User name:</label>
                 <input type="text" id="username" name="username" required placeholder="Enter your username">
@@ -53,7 +96,7 @@
         </form>
 
         <div class="additional-links">
-            <span>Already have an account? <a href="login.html">Login</a></span>
+            <span>Already have an account? <a href="login.php">Login</a></span>
         </div>
     </div>
 
