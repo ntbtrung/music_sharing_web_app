@@ -124,7 +124,7 @@
 }
 
 .dropdown-menu .dropdown-hover:hover {
-display: block;
+    display: block;
 }
 
 .dropdown-hover .dropdown-item {
@@ -141,89 +141,178 @@ display: block;
 /*--------------------------------------LOG IN PAGE---------------------*/
 /*------------------------------------------------------------------------*/
 
-#background-video {
-        position: fixed;
-        right: 0;
-        bottom: 0;
-        width: 100%;
-        height: 100%;
-        width: auto;
-        height: auto;
-        object-fit: cover; 
-        
-    }
+.login-page {
+    background-image: linear-gradient(to right bottom, #acd7ec, #9fc9e2, #92bcd9, #87aecf, #7ca1c5, #7499c0, #6c91bb, #6489b6, #5b84b6, #527fb5, #487ab5, #3e75b4);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+}
 
-    .video-container {
-        background-repeat:no-repeat ;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-        background-size: cover;
-    }
+.page-body-login {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
 
-.login-container, 
-.register-container, 
-.reset-password-container {
+.login-info-frame {
+    height: 100%;
+}
+
+.logo-login {
+    height: 7%;
+    width: 40%;
+    margin: 40% 0 5% 10%;
+}
+
+.text-login {
+    font-size: 30px;
+    line-height: 1;
+    margin-left: 10%;
+    margin-bottom: 3%;
+}
+
+.text-login-2 {
+    font-size: 15px;
+    line-height: 1;
+    margin-left: 10%;
+}
+
+
+.login-section {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.form-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.login-section .form-box h2 {
+    text-align: center;
+    font-size: 25px;
+}
+
+.form-box .input-box {
+    height: 50px;
+    border-bottom: 2px solid#fff;
+    margin: 30px 0;
+    position: relative;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    padding-right: 28px;
+}
+
+.input-box label {
     position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 300px;
-    border: 1px solid #ccc;
-    padding: 20px;
-    border-radius: 5px;
-    background: rgba(255, 255, 255, 0.8);
+    left: 0;
+    transform: translateY(-50%);
+    font-size: 16px;
+    font-weight: 600px;
+    transition: .5s ease;
 }
 
-.form-group {
-    margin-bottom: 15px;
+.input-box input:focus~label,
+.input-box input:valid~label {
+    top: -5px;
 }
 
-button {
-    padding: 8px 16px;
-    border: none;
-    border-radius: 4px;
-    background-color: #155c74;
-    color: white;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #0056b3;
-}
-
-.error-message {
-    color: red;
+.remember-password {
     font-size: 14px;
-    margin-top: 10px;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
 }
 
-.additional-links {
-    margin-top: 10px;
-    text-align: center;
-}
-
-.additional-links a {
-    color: #007bff;
+.remember-password a {
+    color: #fff;
     text-decoration: none;
 }
 
-.additional-links a:hover {
+.remember-password a:hover {
+    color: #fff;
+
     text-decoration: underline;
 }
 
-.register-container form .error-msg {
-    margin: 10px;
-    display: block;
-    background: crimson;
+.button {
+    width: 100%;
+    height: 45px;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #dafffb99;
+    font-size: 16px;
     color: #fff;
-    border-radius: 5px;
-    font-size: 20px;
+    box-shadow: rgba(0, 0, 0, 0.4);
 }
 
+.create-account {
+    font-size: 14.5px;
+    text-align: center;
+    margin: 25px;
+}
+
+.create-account p a {
+    color: #fff;
+    font-weight: 600px;
+    text-decoration: none;
+}
+
+.create-account p a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.login {
+    transform: translateX(0px);
+    transition: transform .6s ease;
+    transition-delay: 0.7s;
+}
+
+.register {
+    transform: translateX(0px);
+    transition: transform .6s ease;
+    transition-delay: 0s;
+}
+
+.forget {
+    transform: translateY(-2500px);
+    transition: transform .6s ease;
+    transition-delay: 0.7s;
+}
+
+.login.change {
+    transform: translateX(600px);
+    transition-delay: 0.7s;
+}
+
+.register.change {
+    transform: translateY(-850px);
+    transition-delay: 0.7s;
+}
+
+.forget.change {
+    transform: translateY(-1650px);
+    transition-delay: 0.7s;
+}
 
 
 

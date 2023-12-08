@@ -2,55 +2,129 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Log in</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
-    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
-    crossorigin="anonymous"></script>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
 </head>
 
 <body>
-  <div class="video-container">
-    <video autoplay muted loop id="background-video">
-      <!-- background video -->
-      <source src="assets/images/a-train.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-  </div>
+    <!-- LOGIN FORM CREATION -->
+    <div class="login-page">
+        <div class="page-body-login m-0 row">
+            <div class="login-info-frame p-0 col-6">
+                <img src="assets/icons/Logo.img.svg" class="logo-login">
+                <h2 class="text-login">Welcome to SoundHub <br>
+                    Online music club for you!!!
+                </h2>
+                <p class="text-login-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, repellendus?</p>
+            </div>
 
-  <div class="login-container">
-    <form action="" method="post">
-      <div class="form-group">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required>
-      </div>
-      <div class="form-group">
-        <label for="password">Password:</label><br>
-        <input type="password" id="password" name="password" required>
-      </div>
-      <div class="form-group">
-        <button type="submit">Login</button>
-      </div>
-      <p id="error-message" class="error-message"></p>
-    </form>
+            <div class="login-section p-0 col-6 ">
 
-    <div class="additional-links">
-      <a href="resetpass.html">Forgot Password?</a>
-      <span>|</span>
-      <a href="register.html">Sign Up</a>
-    </div>
-  </div>
+                <div class="form-box login">
+                    <form method="post" id="login-form">
+                        <h2>Sign In</h2>
+                        <div class="form-group input-box">
+                            <label for="username">User name</label>
+                            <input name="username" id="username" type="text" rules="required|min:5|max:12">
+                            <div class="form-message small text-center my-1">Validate</div>
+                        </div>
 
-  <script src="script.js"></script>
+                        <div class="form-group input-box">
+                            <label for="password">Password</label>
+                            <input name="password" id="password" type="password" rules="required|pass|min:5|max:12">
+                            <div class="form-message small text-center my-1">Validate</div>
+                        </div>
+                        <div class="remember-password">
+                            <label for=""><input type="checkbox">Remember Me</label>
+                            <a onclick="change2()" href="#">Forget password</a>
+                        </div>
+                        <button class="button">Login</button>
+                        <div class="create-account">
+                            <p>Create A New Account?<a href="#" onclick="change1()">Register</a></p>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="form-box register">
+                    <form method="post" id="register-form">
+                        <h2>Register</h2>
+                        <div class="form-group input-box">
+                            <label for="username">User name</label>
+                            <input name="username" id="username" type="text" rules="required|min:5|max:12">
+                            <div class="form-message small text-center my-1">Validate</div>
+                        </div>
+                        <div class="form-group input-box">
+                            <label for="username">Email</label>
+                            <input name="username" id="username" type="text" rules="required|email|min:5|max:12">
+                            <div class="form-message small text-center my-1">Validate</div>
+                        </div>
+                        <div class="form-group input-box">
+                            <label for="password">Password</label>
+                            <input name="password" id="password" type="password" rules="required|pass|min:5|max:12">
+                            <div class="form-message small text-center my-1">Validate</div>
+                        </div>
+                        <div class="remember-password ">
+                            <label for=""><input type="checkbox">I agree with this statment</label>
+                        </div>
+                        <button class="button">Login In</button>
+                        <div class="create-account">
+                            <p>Already Have An Account? <a href="#" onclick="change3()">Sign In</a></p>
+                        </div>
+                    </form>
+                </div>
+                <div class="form-box forget">
+                    <form method="post" id="forget-password-form">
+                        <h2>Reset Password</h2>
+                        <div class="form-group input-box">
+                            <label for="username">Email</label>
+                            <input name="username" id="username" type="text" rules="required|min:5|max:12">
+                            <div class="form-message small text-center my-1">Validate</div>
+                        </div>
+                        <div class="remember-password">
+                            <label for=""><input type="checkbox">Remember Me</label>
+                        </div>
+                        <button class="button">Send code</button>
+                        <div class="create-account">
+                            <a href="#" onclick="change4()">Login Again</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- transition ux -->
+        <script>
+            var login = document.querySelector('.login')
+            var register = document.querySelector('.register')
+            var forget = document.querySelector('.forget')
+            function change1() {
+                register.classList.add('change')
+                login.classList.add('change')
+            }
+            function change2() {
+                forget.classList.add('change')
+                login.classList.add('change')
+            }
+            function change3() {
+                register.classList.remove('change')
+                login.classList.remove('change')
+            }
+            function change4() {
+                forget.classList.remove('change')
+                login.classList.remove('change')
+            }
+        </script>
+
 </body>
 
 </html>
