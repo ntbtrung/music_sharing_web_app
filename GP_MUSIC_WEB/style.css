@@ -6,6 +6,7 @@
     padding: 0px;
     box-sizing: border-box;
     transition: 0.5s;
+    font-family: "Poppins";
 }
 
 /* ------edit navigation bar for ALL PAGE */
@@ -50,7 +51,7 @@
     background-color: #176B87;
     border: 0px;
     overflow: hidden;
-    font-family: "Poppins";
+
     width: 100%;
     outline: none;
     font-weight: 400;
@@ -201,13 +202,14 @@
     font-size: 25px;
 }
 
-.form-box .input-box{
+.form-box .input-box {
     width: 340px;
     height: 50px;
     border-bottom: 2px solid#fff;
     margin: 30px 0;
     position: relative;
 }
+
 .input-box input {
     width: 100%;
     height: 100%;
@@ -228,7 +230,11 @@
     transition: .5s ease;
 }
 
-.input-box input:focus~ label{
+.input-box input:focus~label {
+    top: -5px;
+}
+
+.input-box input:valid~label {
     top: -5px;
 }
 
@@ -314,6 +320,10 @@
     transition-delay: 0.7s;
 }
 
+.form-group.invalid .form-message {
+    color: #aa1931;
+}
+
 
 
 /*--------------------------------------HOME PAGE---------------------*/
@@ -380,7 +390,7 @@
     background-color: #176B87;
     border: 0px;
     overflow: hidden;
-    font-family: "Poppins";
+
     width: 465px;
     outline: none;
 }
@@ -423,7 +433,7 @@
 .post-text {
     flex-shrink: 0;
     color: #DAFFFB;
-    font-family: "Poppins";
+
     font-size: 11px;
     font-style: normal;
     font-weight: 500;
@@ -495,7 +505,7 @@
 }
 
 .frame-title {
-    font-family: "Poppins";
+
     font-weight: 600;
     color: #dafffb;
     font-size: 20px;
@@ -565,7 +575,7 @@
 .video-item-title {
     width: 177px;
     color: #DAFFFB;
-    font-family: "Poppins";
+
     font-size: 16px;
     font-style: normal;
     font-weight: 600;
@@ -576,7 +586,7 @@
 .video-item-footer {
     width: 177px;
     color: #DAFFFB;
-    font-family: "Poppins";
+
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
@@ -660,7 +670,7 @@
 }
 
 .chat-title {
-    font-family: "Poppins";
+
     font-weight: 600;
     color: #dafffb;
     font-size: 24px;
@@ -734,7 +744,7 @@
 
 .name-title {
     color: #DAFFFB;
-    font-family: "Poppins";
+
     font-size: 13px;
     font-style: normal;
     font-weight: 600;
@@ -743,7 +753,7 @@
 
 .message-title {
     color: #DAFFFB;
-    font-family: "Poppins";
+
     font-size: 13px;
     font-style: normal;
     font-weight: 400;
@@ -814,7 +824,7 @@
 }
 
 .upload-title {
-    font-family: "Poppins";
+
     font-weight: 500;
     color: #04364a;
     font-size: 12px;
@@ -852,7 +862,7 @@
 }
 
 .share-title {
-    font-family: "Poppins";
+
     font-weight: 500;
     color: #04364a;
     font-size: 13px;
@@ -877,7 +887,7 @@
 
 .menu-name {
     text-align: center;
-    font-family: "Poppins";
+
     font-weight: 400;
     font-size: 15px;
     letter-spacing: 0;
@@ -887,7 +897,7 @@
 
 .menu-name:hover {
     text-align: center;
-    font-family: "Poppins";
+
     font-weight: 500;
     color: #00ffed;
     font-size: 15px;
@@ -909,7 +919,7 @@
 }
 
 .noti-message-1 {
-    font-family: "Poppins";
+
     font-weight: 500;
     color: #dafffb;
     font-size: 24px;
@@ -918,7 +928,7 @@
 }
 
 .noti-message-2 {
-    font-family: "Poppins";
+
     font-weight: 400;
     color: #00ffed;
     font-size: 15px;
@@ -932,7 +942,7 @@
     height: 30px;
     background-color: #00ffed;
     border-radius: 25px;
-    font-family: "Poppins";
+
     font-weight: 500;
     color: #04364a;
     font-size: 13px;
@@ -959,7 +969,7 @@
 }
 
 .info-title {
-    font-family: "Poppins";
+
     font-weight: 500;
     color: #dafffb;
     font-size: 12px;
@@ -969,7 +979,7 @@
 }
 
 .info-number {
-    font-family: "Poppins";
+
     font-weight: 500;
     color: #dafffb;
     font-size: 20px;

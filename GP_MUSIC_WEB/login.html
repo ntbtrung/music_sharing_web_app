@@ -34,15 +34,15 @@
                     <form method="post" id="login-form">
                         <h2>Sign In</h2>
                         <div class="form-group input-box">
-                            <input name="username" id="username" type="text" rules="required|min:5|max:12">
+                            <input name="username" id="username" type="text" rules="required|min:5|max:20" required>
                             <label for="username">User name</label>
-                            <div class="form-message small text-center my-1">Validate message for input</div>
+                            <div class="form-message small text-center my-1"></div>
                         </div>
 
                         <div class="form-group input-box">
-                            <input name="password" id="password" type="password" rules="required|pass|min:5|max:12">
+                            <input name="password" id="password" type="password" rules="required|pass|min:5|max:20" required>
                             <label for="password">Password</label>
-                            <div class="form-message small text-center my-1">Validate message for input</div>
+                            <div class="form-message small text-center my-1"></div>
                         </div>
                         <div class="remember-password">
                             <label for=""><input type="checkbox">Remember Me</label>
@@ -59,19 +59,19 @@
                     <form method="post" id="register-form">
                         <h2>Register</h2>
                         <div class="form-group input-box">
-                            <input name= "username" id="username" type="text" rules="required|min:5|max:12">
+                            <input name="username" id="username" type="text" rules="required|min:5|max:20" required>
                             <label for="username">User name</label>
-                            <div class="form-message small text-center my-1">Validate message for input</div>
+                            <div class="form-message small text-center my-1"></div>
                         </div>
                         <div class="form-group input-box">
-                            <input name="username" id="username" type="text" rules="required|email|min:5|max:12">
-                            <label for="username">Email</label>
-                            <div class="form-message small text-center my-1">Validate message for input</div>
+                            <input name="email" id="email" type="text" rules="required|email|min:5|max:20" required>
+                            <label for="email">Email</label>
+                            <div class="form-message small text-center my-1"></div>
                         </div>
                         <div class="form-group input-box">
-                            <input name="password" id="password" type="password" rules="required|pass|min:5|max:12">
+                            <input name="password" id="password" type="password" rules="required|pass|min:5|max:20" required>
                             <label for="password">Password</label>
-                            <div class="form-message small text-center my-1">Validate message for input</div>
+                            <div class="form-message small text-center my-1"></div>
                         </div>
                         <div class="remember-password ">
                             <label for=""><input type="checkbox">I agree with this statment</label>
@@ -83,12 +83,12 @@
                     </form>
                 </div>
                 <div class="form-box forget">
-                    <form method="post" id="forget-password-form">
+                    <form method="post" id="forget-form">
                         <h2>Reset Password</h2>
                         <div class="form-group input-box">
-                            <input name="username" id="username" type="text" rules="required|min:5|max:12">
-                            <label for="username">Email</label>
-                            <div class="form-message small text-center my-1">Validate message for input</div>
+                            <input name="email" id="email" type="text" rules="required|email|min:5|max:20" required>
+                            <label for="email">Email</label>
+                            <div class="form-message small text-center my-1"></div>
                         </div>
                         <div class="remember-password">
                             <label for=""><input type="checkbox">Remember Me</label>
@@ -102,7 +102,7 @@
             </div>
         </div>
 
-
+        <script src="validate.js"></script>
         <script>
             // transition ux
             var login = document.querySelector('.login')
@@ -124,7 +124,14 @@
                 forget.classList.remove('change')
                 login.classList.remove('change')
             }
+
+            new Validator('#login-form');
+            new Validator('#register-form');
+            new Validator('#forget-form');
+            
+
         </script>
+
 
 </body>
 
