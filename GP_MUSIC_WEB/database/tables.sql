@@ -80,11 +80,15 @@ CREATE TABLE `user` (
   `id` int(10) UNSIGNED NOT NULL,
   `username` varchar(50) NOT NULL,
   `password` varchar(50) NOT NULL,
-  `nickname` varchar(50) NOT NULL,
   `email` varchar(50) NOT NULL,
-  `phone` varchar(50) DEFAULT NULL,
-  `role_id` int(10) UNSIGNED NOT NULL
+  `age` int(3) UNSIGNED,
+  `avatar` varchar(255), -- Assuming the avatar file path or URL
+  `background_avatar` varchar(255), -- Assuming the background avatar file path or URL
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id` (`id`,`username`),
+  UNIQUE KEY `email` (`email`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
 
 --
 -- Indexes for dumped tables
