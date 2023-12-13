@@ -615,6 +615,11 @@
     background-color: #04364a;
 }
 
+.noti-frame {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
 .noti-title {
     font-size: 50px;
     color: #DAFFFB;
@@ -811,7 +816,8 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent background */
     justify-content: center;
     align-items: center;
     z-index: 1;
@@ -1018,4 +1024,84 @@
     /* height: fit-content; */
     background-color: #155c74;
 
+}
+
+
+
+/*--------------------------------------ABOUT US PAGE ---------------------*/
+/*------------------------------------------------------------------------*/
+
+.abt-bg {
+    background-color: #155c74;
+    width: 100%;
+    height: 150vh;
+}
+
+.main-abt {
+    height: auto;
+    background-color: #04364a;
+}
+
+.abt-frame {
+    margin-left: 20px;
+}
+
+.abt-header {
+    color: #DAFFFB;
+    font-family: Poppins;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 20px;
+}
+
+.abt-desc {
+    color: #DAFFFB;
+    font-family: Poppins;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/*--------------------------------------LEGAL PAGE ---------------------*/
+/*------------------------------------------------------------------------*/
+
+.legal-bg {
+    background-color: #155c74;
+    width: 100%;
+    height: 150vh;
+}
+
+.main-legal {
+    height: auto;
+    background-color: #04364a;
+}
+
+.legal-frame {
+    margin-left: 20px;
+}
+
+.legal-header {
+    color: #DAFFFB;
+    font-family: Poppins;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 20px;
+}
+
+.legal-desc {
+    color: #DAFFFB;
+    font-family: Poppins;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
