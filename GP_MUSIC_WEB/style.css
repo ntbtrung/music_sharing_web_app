@@ -804,6 +804,30 @@
     position: relative;
 }
 
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Add this CSS to blur the background when the modal is active */
+.blur {
+    filter: blur(5px);
+}
+
 .upload-btn-avt {
     position: absolute;
     width: 20%;

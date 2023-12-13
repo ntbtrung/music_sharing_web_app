@@ -77,15 +77,15 @@
                     <img class="avt-icon" src="assets/icons/Ava-profile.svg" alt="">
                 </div>
                 <div class="modal" id="uploadModal">
-                    <div class="modal-content">
-                        <table>
-                            <tr>
-                                <td><button onclick="changeAvatar()">Change Avatar</button></td>
-                                <td><button onclick="changeBackground()">Change Background</button></td>
-                            </tr>
-                        </table>
+                        <div class="modal-content">
+                            <table>
+                                <tr>
+                                    <td><button onclick="changeAvatar()">Change Avatar</button></td>
+                                    <td><button onclick="changeBackground()">Change Background</button></td>
+                                </tr>
+                            </table>
+                        </div>
                     </div>
-                </div>
                 <div class="share-frame-btn m-0 row">
                     <div class="share-btn">
                         <img class="share-icon" src="assets/icons/External.svg" alt="">
@@ -136,32 +136,32 @@
     </div>
     <script>
         function showUploadModal() {
-            var modal = document.getElementById('uploadModal');
-            modal.style.display = 'flex';
+    var modal = document.getElementById('uploadModal');
+    modal.style.display = 'flex';
 
-            // Add blur effect to everything else
-            document.body.classList.add('blur');
-        }
+    // Add blur effect to everything else
+    document.body.classList.add('blur');
+}
 
-        function hideUploadModal() {
-            var modal = document.getElementById('uploadModal');
-            modal.style.display = 'none';
+function hideUploadModal() {
+    var modal = document.getElementById('uploadModal');
+    modal.style.display = 'none';
 
-            // Remove blur effect from everything else
-            document.body.classList.remove('blur');
-        }
+    // Remove blur effect from everything else
+    document.body.classList.remove('blur');
+}
 
-        function changeAvatar() {
-            // Add your logic for changing avatar here
-            alert('Changing Avatar');
-            hideUploadModal();
-        }
+function changeAvatar() {
+    // Add your logic for changing avatar here
+    alert('Changing Avatar');
+    hideUploadModal();
+}
 
-        function changeBackground() {
-            // Add your logic for changing background here
-            alert('Changing Background');
-            hideUploadModal();
-        }
+function changeBackground() {
+    // Add your logic for changing background here
+    alert('Changing Background');
+    hideUploadModal();
+}
 
     </script>
 </body>
