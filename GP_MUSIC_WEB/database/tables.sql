@@ -65,10 +65,20 @@ CREATE TABLE `role` (
 --
 
 CREATE TABLE `song` (
-  `id` int(10) UNSIGNED NOT NULL,
-  `name` varchar(50) NOT NULL,
-  `genre` varchar(50) NOT NULL
+ `song_id` int(10) UNSIGNED NOT NULL,
+ `song_name` varchar(50) NOT NULL,
+ `song_image` varchar(255),
+ `audio_file` varchar(255),
+ PRIMARY KEY (`song_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Constraints for table `song`
+--
+ALTER TABLE `song`
+ ADD CONSTRAINT `song_song_id` FOREIGN KEY (`song_id`) REFERENCES `post` (`song_id`);
+
+COMMIT;
 
 -- --------------------------------------------------------
 

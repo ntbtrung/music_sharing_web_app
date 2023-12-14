@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
@@ -76,16 +76,6 @@
                     </div>
                     <img class="avt-icon" src="assets/icons/Ava-profile.svg" alt="">
                 </div>
-                <div class="modal" id="uploadModal">
-                    <div class="modal-content">
-                        <table>
-                            <tr>
-                                <td><button onclick="changeAvatar()">Change Avatar</button></td>
-                                <td><button onclick="changeBackground()">Change Background</button></td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
                 <div class="share-frame-btn m-0 row">
                     <div class="share-btn">
                         <img class="share-icon" src="assets/icons/External.svg" alt="">
@@ -134,36 +124,6 @@
             <div class="right-profile col-1 "></div>
         </div>
     </div>
-    <script>
-        function showUploadModal() {
-            var modal = document.getElementById('uploadModal');
-            modal.style.display = 'flex';
-
-            // Add blur effect to everything else
-            document.body.classList.add('blur');
-        }
-
-        function hideUploadModal() {
-            var modal = document.getElementById('uploadModal');
-            modal.style.display = 'none';
-
-            // Remove blur effect from everything else
-            document.body.classList.remove('blur');
-        }
-
-        function changeAvatar() {
-            // Add your logic for changing avatar here
-            alert('Changing Avatar');
-            hideUploadModal();
-        }
-
-        function changeBackground() {
-            // Add your logic for changing background here
-            alert('Changing Background');
-            hideUploadModal();
-        }
-
-    </script>
 </body>
 
 </html>
