@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3307
--- Generation Time: Nov 15, 2023 at 02:39 PM
+-- Generation Time: Dec 15, 2023 at 05:05 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -65,20 +65,11 @@ CREATE TABLE `role` (
 --
 
 CREATE TABLE `song` (
- `song_id` int(10) UNSIGNED NOT NULL,
- `song_name` varchar(50) NOT NULL,
- `song_image` varchar(255),
- `audio_file` varchar(255),
- PRIMARY KEY (`song_id`)
+  `id` int(10) UNSIGNED NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `genre` varchar(50) NOT NULL,
+  `cover_photo` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Constraints for table `song`
---
-ALTER TABLE `song`
- ADD CONSTRAINT `song_song_id` FOREIGN KEY (`song_id`) REFERENCES `post` (`song_id`);
-
-COMMIT;
 
 -- --------------------------------------------------------
 
@@ -90,15 +81,13 @@ CREATE TABLE `user` (
   `id` int(10) UNSIGNED NOT NULL,
   `username` varchar(50) NOT NULL,
   `password` varchar(50) NOT NULL,
+  `nickname` varchar(50) NOT NULL,
   `email` varchar(50) NOT NULL,
-  `age` int(3) UNSIGNED,
-  `avatar` varchar(255), -- Assuming the avatar file path or URL
-  `background_avatar` varchar(255), -- Assuming the background avatar file path or URL
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `id` (`id`,`username`),
-  UNIQUE KEY `email` (`email`)
+  `phone` varchar(50) DEFAULT NULL,
+  `role_id` int(10) UNSIGNED NOT NULL,
+  `avatar` varchar(200) NOT NULL,
+  `biography` varchar(500) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
 
 --
 -- Indexes for dumped tables
