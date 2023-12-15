@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
@@ -129,10 +128,30 @@
             new Validator('#register-form');
             new Validator('#forget-form');
             
-
         </script>
 
 
 </body>
 
 </html>
+
+<?php 
+$servername = "localhost"; // Địa chỉ máy chủ MySQL
+    $username = "root"; // Tên người dùng MySQL
+    $password = ""; // Mật khẩu MySQL
+    $dbname = "test"; // Tên cơ sở dữ liệu MySQL
+    
+    // Kết nối đến cơ sở dữ liệu
+    $conn = new mysqli($servername, $username, $password, $dbname);
+
+    // Kiểm tra kết nối
+    if ($conn->connect_error) {
+        die("Fail to connect to sever: " . $conn->connect_error);
+    }
+    echo '<script>alert("Connect to sever complete")</script>';
+
+
+
+
+    
+?>
