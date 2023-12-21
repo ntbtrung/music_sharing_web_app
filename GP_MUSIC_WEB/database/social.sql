@@ -68,7 +68,8 @@ CREATE TABLE `song` (
   `id` int(10) UNSIGNED NOT NULL,
   `name` varchar(50) NOT NULL,
   `genre` varchar(50) NOT NULL,
-  `cover_photo` varchar(200) NOT NULL
+  `cover_photo` varchar(200) NOT NULL,
+  `audio_file` varchar(200) NOT NULL,
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
