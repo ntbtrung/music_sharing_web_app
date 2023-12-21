@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `music server`
+-- Database: `social`
 --
 
 -- --------------------------------------------------------
@@ -86,7 +86,8 @@ CREATE TABLE `user` (
   `phone` varchar(50) DEFAULT NULL,
   `role_id` int(10) UNSIGNED NOT NULL,
   `avatar` varchar(200) NOT NULL,
-  `biography` varchar(500) DEFAULT NULL
+  `background_image` varchar(200) DEFAULT NULL,
+  `biography` varchar(500) DEFAULT NULL,
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
