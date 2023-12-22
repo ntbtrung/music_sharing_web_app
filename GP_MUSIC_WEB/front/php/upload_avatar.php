@@ -1,8 +1,8 @@
 <?php
    // php/upload_avatar.php
-   require("config.php"); // Include the database configuration file
+   require("config.php");
 
-   if (isset($_FILES['avatar'])) {
+   if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES['avatar'])) {
        $file_name = $_FILES['avatar']['name'];
        $tmp_name = $_FILES['avatar']['tmp_name'];
 
@@ -14,7 +14,12 @@
        // $update_query = "UPDATE user SET avatar='$file_name' WHERE id=$user_id";
        // $result = mysqli_query($conn, $update_query);
 
-       // Return the uploaded file name
-       echo $file_name;
+       // Redirect back to index.php after successful upload
+       header("Location: /profile.php");
+       exit();
+   } else {
+       // Handle errors or redirect back to index.php with an error message
+       header("Location:/profile.php?error=1");
+       exit();
    }
    ?>

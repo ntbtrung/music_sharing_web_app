@@ -85,7 +85,7 @@ CREATE TABLE `user` (
   `email` varchar(50) NOT NULL,
   `phone` varchar(50) DEFAULT NULL,
   `role_id` int(10) UNSIGNED NOT NULL,
-  `avatar` varchar(200) NOT NULL,
+  `avatar` varchar(255) NOT NULL,
   `background` varchar(255) NOT NULL,
   `biography` varchar(500) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
