@@ -146,29 +146,29 @@
     </div>
     </div>
     <script>
-        // Assuming you're using jQuery
-$(document).ready(function () {
-    $('#avatar-upload').change(function () {
-        var file_data = $('#avatar-upload').prop('files')[0];
-        var form_data = new FormData();
-        form_data.append('avatar', file_data);
+        //jQuery
+        $(document).ready(function () {
+       $('#avatar-upload').change(function () {
+           var file_data = $('#avatar-upload').prop('files')[0];
+           var form_data = new FormData();
+           form_data.append('avatar', file_data);
 
-        // Send the file to the server using AJAX
-        $.ajax({
-            url: 'php/upload_avatar.php',
-            dataType: 'text',
-            cache: false,
-            contentType: false,
-            processData: false,
-            data: form_data,
-            type: 'post',
-            success: function (response) {
-                // Update the user's avatar with the newly uploaded image
-                $('.avt-icon').attr('src', 'photo/avatars/' + response);
-            },
-        });
-    });
-});
+           // Send the file to the server using AJAX
+           $.ajax({
+               url: 'php/upload_avatar.php',
+               dataType: 'text',
+               cache: false,
+               contentType: false,
+               processData: false,
+               data: form_data,
+               type: 'post',
+               success: function (response) {
+                   // Update the user's avatar with the newly uploaded image
+                   $('.avt-icon').attr('src', 'photo/avatars/' + response);
+               },
+           });
+       });
+   });
 
     </script>
 </body>
