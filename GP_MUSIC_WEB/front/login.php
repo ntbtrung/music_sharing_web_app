@@ -2,7 +2,7 @@
 $servername = "localhost"; // Địa chỉ máy chủ MySQL
 $username = "root"; // Tên người dùng MySQL
 $password = ""; // Mật khẩu MySQL
-$dbname = "project_music"; // Tên cơ sở dữ liệu MySQL
+$dbname = "login"; // Tên cơ sở dữ liệu MySQL
 
 // Kết nối đến cơ sở dữ liệu
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -19,7 +19,7 @@ if (isset($_POST['btn-register'])) {
     $email = $_POST['email'];
     $password = $_POST['password'];
 
-    $sql = "INSERT INTO `user`(`username`,`email`,`password`)
+    $sql = "INSERT INTO `table_login`(`username`,`email`,`password`)
     VALUES ('$username','$email', md5('$password'))";
 
     if ($conn->query($sql) === TRUE) {
