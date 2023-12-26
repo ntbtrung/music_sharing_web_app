@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3307
--- Generation Time: Dec 15, 2023 at 05:05 AM
+-- Generation Time: Dec 26, 2023 at 09:31 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `social`
+-- Database: `music server`
 --
 
 -- --------------------------------------------------------
@@ -50,17 +50,6 @@ CREATE TABLE `post` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `role`
---
-
-CREATE TABLE `role` (
-  `id` int(10) UNSIGNED NOT NULL,
-  `name` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `song`
 --
 
@@ -79,14 +68,13 @@ CREATE TABLE `song` (
 
 CREATE TABLE `user` (
   `id` int(10) UNSIGNED NOT NULL,
-  `username` varchar(255) NOT NULL,
-  `password` varchar(255) NOT NULL,
-  `nickname` varchar(255) NOT NULL,
-  `email` varchar(255) NOT NULL,
-  `role_id` int(10) UNSIGNED NOT NULL,
-  `avatar` varchar(255) NOT NULL,
-  `background` varchar(255) NOT NULL,
-  `biography` varchar(255) DEFAULT NULL
+  `username` varchar(50) NOT NULL,
+  `password` varchar(50) NOT NULL,
+  `nickname` varchar(50) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `phone` varchar(50) DEFAULT NULL,
+  `avatar` varchar(200) NOT NULL,
+  `biography` varchar(500) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -110,13 +98,6 @@ ALTER TABLE `post`
   ADD KEY `post_author_id` (`author_id`);
 
 --
--- Indexes for table `role`
---
-ALTER TABLE `role`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `id` (`id`,`name`);
-
---
 -- Indexes for table `song`
 --
 ALTER TABLE `song`
@@ -128,8 +109,7 @@ ALTER TABLE `song`
 ALTER TABLE `user`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `id` (`id`,`username`),
-  ADD UNIQUE KEY `email` (`email`),
-  ADD KEY `user_role_id` (`role_id`);
+  ADD UNIQUE KEY `email` (`email`);
 
 --
 -- Constraints for dumped tables
@@ -148,12 +128,6 @@ ALTER TABLE `comment`
 ALTER TABLE `post`
   ADD CONSTRAINT `post_author_id` FOREIGN KEY (`author_id`) REFERENCES `user` (`id`),
   ADD CONSTRAINT `post_song_id` FOREIGN KEY (`song_id`) REFERENCES `song` (`id`);
-
---
--- Constraints for table `user`
---
-ALTER TABLE `user`
-  ADD CONSTRAINT `user_role_id` FOREIGN KEY (`role_id`) REFERENCES `role` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
