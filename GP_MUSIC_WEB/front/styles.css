@@ -9,6 +9,7 @@
     font-family: "Poppins";
 }
 
+
 /* ------edit navigation bar for ALL PAGE */
 /*-----------------------------------------*/
 
@@ -137,7 +138,20 @@
     height: 54px;
     cursor: pointer;
 }
-
+/* ------edit music bar for ALL PAGE */
+/*-----------------------------------------*/
+.music-bar{
+    background-color: #f7f7f7;
+    position: fixed;
+    bottom: 0;
+    height: 8vh;
+    width: 100vw;
+    z-index: 1;
+}
+.avt-bar{
+    height: 8vh;
+    display: flex;
+}
 
 /*--------------------------------------LOG IN PAGE---------------------*/
 /*------------------------------------------------------------------------*/
@@ -300,23 +314,23 @@
 }
 
 .forget {
-    transform: translateY(-2500px);
+    transform: translateY(-300%);
     transition: transform .6s ease;
     transition-delay: 0.7s;
 }
 
 .login.change {
-    transform: translateX(600px);
+    transform: translateX(150%);
     transition-delay: 0.7s;
 }
 
 .register.change {
-    transform: translateY(-850px);
+    transform: translateY(-100%);
     transition-delay: 0.7s;
 }
 
 .forget.change {
-    transform: translateY(-1650px);
+    transform: translateY(-200%);
     transition-delay: 0.7s;
 }
 
