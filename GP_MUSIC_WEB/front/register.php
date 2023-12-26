@@ -7,7 +7,7 @@ $dbname = "project_music"; // Tên cơ sở dữ liệu MySQL
 // Kết nối đến cơ sở dữ liệu
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-// Kiểm tra kết nối
+
 if ($conn->connect_error) {
     die("Fail to connect to sever: " . $conn->connect_error);
 }
