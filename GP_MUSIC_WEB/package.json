@@ -1,0 +1,19 @@
+{
+  "name": "gp_music_web",
+  "version": "1.0.0",
+  "description": "Music sharing web app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ntbtrung/music_sharing_web_app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ntbtrung/music_sharing_web_app/issues"
+  },
+  "homepage": "https://github.com/ntbtrung/music_sharing_web_app#readme"
+}
