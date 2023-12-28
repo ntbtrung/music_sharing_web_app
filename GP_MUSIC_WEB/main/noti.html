@@ -46,7 +46,7 @@
             </li>
             <li class="navigation-bar3 pl-0 col-4">
                 <div class="dropdown nav-btn-2 ml-auto mx-2">
-                    <img src="assets/icons/Info_fill.svg" class=" nav-icon-2 dropdown-toggle" data-toggle="dropdown" >
+                    <img src="assets/icons/Info_fill.svg" class=" nav-icon-2 dropdown-toggle" data-toggle="dropdown">
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="abtus.html">About us</a></li>
                         <li><a class="dropdown-item" href="legal.html">Legal</a></li>
@@ -68,34 +68,36 @@
         </ul>
         <div class="music-bar m-0 row">
             <div class="avt-bar col-4">
-                <div class="avt-music">
+                <div class="music-thumb">
                     <img src="assets/icons/User_cicrle_duotone.svg" alt="">
                 </div>
                 <div class="song-title">
-                    <div>There's no one at all</div>
-                    <p>MTP</p>
+                    <div class="music-name">There's no one at all</div>
+                    <p class="singer-name">MTP</p>
                 </div>
             </div>
             <div class="control-bar col-4">
                 <div class="control-button">
-                    <img class="control-icon" src="assets/icons/random.svg" alt="">
-                    <img class="control-icon" src="assets/icons/prev.svg" alt="">
-                    <img class="control-icon" src="assets/icons/pause.svg" alt="">
-                    <img class="control-icon" src="assets/icons/next.svg" alt="">
-                    <img class="control-icon" src="assets/icons/repeat.svg" alt="">
+                    <img class="control-icon play-random" src="assets/icons/random-off.svg" alt="">
+                    <img class="control-icon play-back" src="assets/icons/prev.svg" alt="">
+                    <img class="control-icon player-inner" src="assets/icons/continue.svg" alt="">
+                    <img class="control-icon play-forward" src="assets/icons/next.svg" alt="">
+                    <img class="control-icon play-repeat" src="assets/icons/repeat-off.svg" alt="">
                 </div>
                 <input type="range" name="range" id="range" class="range" />
+                <audio id="song" src="./assets/musics/memes.mp3"></audio>
                 <div class="timer">
-                    <div class="duration">0:00</div>
-                    <div class="remaining">9:99</div>
-                  </div>
+                    <div class="playtime">0:00</div>
+                    <div class="duration">9:99</div>
+                </div>
             </div>
             <div class="more-bar col-4">
-                <img class="more-icon" src="assets/icons/volume-up.svg" alt="">
+                <img class="more-icon" src="assets/icons/volume-up.svg" alt=""><input type="range" id="volume-control" class="range" value="40" >
                 <img class="more-icon" src="assets/icons/download.svg" alt="">
-                <img class="more-icon" src="assets/icons/zoom.svg" alt="">
+                <a href="musicpage.html"><img class="more-icon" src="assets/icons/zoom.svg" alt=""></a>
             </div>
         </div>
+        <script src="musicbar.js"></script>
         <!-- bodybar -->
         <div class="noti-bg m-0 row">
             <div class="main-noti col-9">

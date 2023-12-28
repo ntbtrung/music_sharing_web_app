@@ -141,8 +141,8 @@
 }
 
 
-/* ------edit music bar for ALL PAGE */
-/*-----------------------------------------*/
+/* --------------------------edit music bar for ALL PAGE        */
+/*---------------------------------------------------------*/
 
 .music-bar {
     background-color: #000000;
@@ -161,11 +161,17 @@
 }
 
 .music-thumb {
-    background-color: white;
-    margin: 2%;
-    overflow: hidden;
+    height: 60px;
+    width: 60px;
     border-radius: 5px;
     cursor: pointer;
+    margin-top: 3%;
+    
+}
+.music-thumb img{
+    height: 60px;
+    width: 60px;
+    border-radius: 5px;
 
 }
 
@@ -234,10 +240,16 @@
     display: flex;
     justify-content: end;
     align-items: center;
+    cursor: pointer;
+
 }
 
 .more-icon {
     margin: 0 5% 0 12%;
+}
+#volume-control {
+    width: 20%;
+    margin-left: -4%;
 }
 
 

@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play Music</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            transition: 0.5s;
+            font-family: "Poppins";
+        }
+
+        .navigation-bar {
+            width: 100%;
+            height: 80px;
+            background-color: #04364a;
+
+        }
+
+        /*  colum 1 in nav-bar  */
+        .navigation-bar1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logo {
+            width: fit-content;
+            height: 18px;
+        }
+
+        .search-box {
+            width: fit-content;
+            height: 42px;
+            border-radius: 20px;
+            background-color: #176b87;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .search-icon {
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+        }
+
+        .search-place {
+            background-color: #176B87;
+            border: 0px;
+            overflow: hidden;
+
+            width: 100%;
+            outline: none;
+            font-weight: 400;
+            color: #dafffb80;
+            font-size: 13px;
+        }
+
+        /*  colum 2 in nav-bar  */
+        .navigation-bar2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .nav-btn-1 {
+            width: 80px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+        }
+
+        .nav-btn-1:hover {
+            width: 80px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            background-color: #155c74;
+        }
+
+        .active {
+            width: 80px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            background-color: #155c74;
+            border: 1px solid black;
+        }
+
+        .nav-icon {
+            width: 28px;
+            height: 28px;
+            cursor: pointer;
+        }
+
+        /*  colum 3 in nav-bar  */
+        .navigation-bar3 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .nav-btn-2 {
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .nav-icon-2 {
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+        }
+
+        .dropdown-menu .dropdown-hover:hover {
+            display: block;
+        }
+
+        .dropdown-hover .dropdown-item {
+            cursor: pointer;
+        }
+
+        .nav-icon-3 {
+            width: 54px;
+            height: 54px;
+            cursor: pointer;
+        }
+
+        .music-page {
+            background-image: linear-gradient(to right bottom, #acd7ec, #9fc9e2, #92bcd9, #87aecf, #7ca1c5, #7499c0, #6c91bb, #6489b6, #5b84b6, #527fb5, #487ab5, #3e75b4);
+            background-position: center;
+            background-size: cover;
+            height: 100vh;
+            width: 100%;
+
+        }
+
+
+
+        .music-bar {
+            background-color: #292929;
+            position: fixed;
+            height: 50vh;
+            width: 30vw;
+            z-index: 1;
+            color: white;
+            border-radius: 10px;
+            position: absolute;
+            top: 20%;
+            left: 35%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .music-thumb {
+            height: 150px;
+            width: 150px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .music-thumb img {
+            height: 150px;
+            width: 150px;
+            border-radius: 10px;
+        }
+
+        .song-title div {
+            font-weight: 500;
+            color: white;
+            font-size: 15px;
+        }
+
+        .song-title p {
+            font-weight: 300;
+            color: white;
+            font-style: italic;
+            font-size: 14px;
+        }
+
+        .control-bar {
+            width: 100%;
+        }
+
+        .control-button {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 4% 13% 0 13%;
+        }
+
+        .control-icon {
+            height: 20px;
+            width: 20px;
+            cursor: pointer;
+        }
+
+        .range {
+            -webkit-appearance: none;
+            width: 90%;
+            background: transparent;
+            margin-left: 5%;
+        }
+
+        .range::-webkit-slider-runnable-track {
+            width: 100%;
+            height: 3px;
+            background-color: #eeee;
+        }
+
+        .range::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            background-color: #000000;
+            width: 10px;
+            height: 10px;
+            border-radius: 100rem;
+            margin-top: -3px;
+            box-shadow: 0 0 0 1px #ffffff
+        }
+
+        .timer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 14px;
+            color: #999;
+        }
+
+        .more-bar {
+            margin-top: 5%;
+            width: 100%;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+        }
+
+        #volume-control {
+            width: 20%;
+            margin-left: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="music-page">
+        <!-- navigationbar -->
+        <ul class="nav navigation-bar m-0 row">
+            <li class="navigation-bar1 pr-0 col-4">
+                <div class="logo mr-3">
+                    <a href="home.html"><img src="assets/icons/Logo.img.svg" alt=""></a>
+                </div>
+                <div class="search-box">
+                    <span><img class="search-icon ml-2" src="assets/icons/Search.svg"></span>
+                    <input type="search" class="search-place" placeholder="Search in SOUNDHUB">
+                </div>
+            </li>
+            <li class="navigation-bar2 p-0 col-4">
+                <div class="nav-btn-1 ml-auto " data-toggle="toggle">
+                    <a href="home.html"><img src="assets/icons/Home.svg" class="nav-icon"></a>
+                </div>
+                <div class="nav-btn-1 mx-5" data-toggle="toggle">
+                    <a href="library.html"><img src="assets/icons/darhboard_alt.svg" class="nav-icon"></a>
+                </div>
+                <div class="nav-btn-1 mr-auto" data-toggle="toggle">
+                    <a href="noti.html"><img src="assets/icons/Bell_pin.svg" class="nav-icon"></a>
+                </div>
+            </li>
+            <li class="navigation-bar3 pl-0 col-4">
+                <div class="dropdown nav-btn-2 ml-auto mx-2">
+                    <img src="assets/icons/Info_fill.svg" class=" nav-icon-2 dropdown-toggle" data-toggle="dropdown">
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="abtus.html">About us</a></li>
+                        <li><a class="dropdown-item" href="legal.html">Legal</a></li>
+                        <li><a class="dropdown-item" href="copyright.html">Copyright</a></li>
+                        <li><a class="dropdown-item" href="support.html">Support</a></li>
+                        <li><a class="dropdown-item" href="settings.html">Settings</a></li>
+                        <div class="dropdown-divider"></div>
+                        <li><a class="dropdown-item" href="#">Signout</a></li>
+                    </ul>
+                </div>
+
+                <div class="nav-btn-2 mx-2" data-toggle="toggle">
+                    <a href="chat.html"><img src="assets/icons/Chat_alt_2_fill.svg" class="nav-icon-2"></a>
+                </div>
+                <div class="nav-btn-2 mx-2" data-toggle="toggle">
+                    <a href="profile.html"><img src="assets/icons/User_cicrle_duotone.svg" class="nav-icon-3"></a>
+                </div>
+            </li>
+        </ul>
+
+        <div class="music-bar ">
+            <div class="avt-bar ">
+                <div class="music-thumb mt-3">
+                    <img src="assets/icons/User_cicrle_duotone.svg" alt="">
+                </div>
+                <div class="song-title">
+                    <div class="music-name text-center mt-4">There's no one at all</div>
+                    <p class="singer-name text-center">MTP</p>
+                </div>
+            </div>
+            <div class="control-bar ">
+                <div class="control-button">
+                    <img class="control-icon play-random" src="assets/icons/random-off.svg" alt="">
+                    <img class="control-icon play-back" src="assets/icons/prev.svg" alt="">
+                    <img class="control-icon player-inner" src="assets/icons/continue.svg" alt="">
+                    <img class="control-icon play-forward" src="assets/icons/next.svg" alt="">
+                    <img class="control-icon play-repeat" src="assets/icons/repeat-off.svg" alt="">
+                </div>
+                <input type="range" name="range" id="range" class="range" />
+                <audio id="song" src="./assets/musics/neverbealone.mp3"></audio>
+                <div class="timer">
+                    <div class="playtime">0:00</div>
+                    <div class="duration">9:99</div>
+                </div>
+            </div>
+            <div class="more-bar ">
+                <img class="more-icon ml-3" src="assets/icons/volume-up.svg" alt=""><input type="range" id="volume-control"
+                    class="range" value="40">
+                <img class="more-icon ml-auto mr-4" src="assets/icons/download.svg" alt="">
+            </div>
+        </div>
+        <script src="musicbar.js"></script>
+    </div>
+
+
+</body>
+
+</html>

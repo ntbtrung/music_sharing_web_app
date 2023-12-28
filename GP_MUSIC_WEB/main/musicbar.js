@@ -6,17 +6,44 @@ const prevBtn = document.querySelector(".play-back");
 const durationTime = document.querySelector(".duration");
 const playTime = document.querySelector(".playtime");
 const rangeBar = document.querySelector(".range");
-// const musicName = document.querySelector(".music-name");
-// const musicThumbnail = document.querySelector(".music-thumb");
-// const musicImage = document.querySelector(".music-thumb img");
-// const playRepeat = document.querySelector(".play-repeat");
+const musicName = document.querySelector(".music-name");
+const singerName = document.querySelector(".singer-name");
+const musicImage = document.querySelector(".music-thumb img");
+const playRepeat = document.querySelector(".play-repeat");
+const playRandom = document.querySelector(".play-random")
 
-let timer;
+//list music here
+const musics = [
+    {
+        id: 1,
+        name: "Memes",
+        singer: "NIVIRO",
+        file: "memes.mp3",
+        image:
+            "https://avatar-ex-swe.nixcdn.com/song/2018/05/04/c/0/e/0/1525423206353_640.jpg",
+    },
+    {
+        id: 2,
+        name: "Never be alone",
+        singer: "ThefatRat",
+        file: "neverbealone.mp3",
+        image:
+            "https://i1.sndcdn.com/artworks-000104960955-urm1jm-t500x500.jpg",
+    },
+    {
+        id: 3,
+        name: "See you again",
+        singer: "Charlie puth",
+        file: "seeyouagain.mp3",
+        image:
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLndv1ULQ_r1wftMh9_E4qoljiMrgAGHD0Iw&usqp=CAU"
+    },
+    
+];
+
+// set to play a song and nex, prev button
 let isPlaying = true;
 let indexSong = 0;
-const musics = ["seeyouagain.mp3", "neverbealone.mp3"];
-song.setAttribute('src', `./assets/musics/${musics[0]}`)
-
 function changeSong(dir) {
     if (dir === 1) {
         indexSong++;
@@ -32,7 +59,7 @@ function changeSong(dir) {
         }
         isPlaying = true;
     }
-    song.setAttribute('src', `./assets/musics/${musics[indexSong]}`);
+    init(indexSong);
     playPause();
 }
 nextBtn.addEventListener('click', function () {
@@ -55,9 +82,11 @@ function playPause() {
         playBtn.setAttribute('src', 'assets/icons/continue.svg')
         isPlaying = true;
         clearInterval(timer);
-
     }
 }
+
+// Set and change Time from second to Minute and time play music
+let timer;
 function displayTimer() {
     const { duration, currentTime } = song;
     rangeBar.max = duration;
@@ -82,117 +111,65 @@ function handleChangeBar() {
 displayTimer();
 
 
+// set to repeat a song
+let isRepeat = false;
+playRepeat.addEventListener("click", function () {
+    if (isRepeat) {
+        isRepeat = false;
+        playRepeat.setAttribute('src', 'assets/icons/repeat-off.svg')
+    } else {
+        playRepeat.setAttribute('src', 'assets/icons/repeat-on.svg')
+        isRepeat = true;
+    }
+});
 
-// let isPlaying = true;
-// let indexSong = 0;
-// let isRepeat = false;
-// // const musics = ["holo.mp3", "summer.mp3", "spark.mp3", "home.mp3"];
-// const musics = [
-//   {
-//     id: 1,
-//     title: "Holo",
-//     file: "holo.mp3",
-//     image:
-//       "https://images.unsplash.com/photo-1614624532983-4ce03382d63d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1931&q=80",
-//   },
-//   {
-//     id: 2,
-//     title: "Summer",
-//     file: "summer.mp3",
-//     image:
-//       "https://images.unsplash.com/photo-1616763355548-1b606f439f86?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
-//   },
-// ];
-// /**
-//  * Music
-//  * id: 1
-//  * title: Holo
-//  * file: holo.mp3
-//  * image: unsplash
-//  */
-// let timer;
-// let repeatCount = 0;
-// playRepeat.addEventListener("click", function () {
-//   if (isRepeat) {
-//     isRepeat = false;
-//     playRepeat.removeAttribute("style");
-//   } else {
-//     isRepeat = true;
-//     playRepeat.style.color = "#ffb86c";
-//   }
-// });
-// nextBtn.addEventListener("click", function () {
-//   changeSong(1);
-// });
-// prevBtn.addEventListener("click", function () {
-//   changeSong(-1);
-// });
-// song.addEventListener("ended", handleEndedSong);
-// function handleEndedSong() {
-//   repeatCount++;
-//   if (isRepeat && repeatCount === 1) {
-//     // handle repeat song
-//     isPlaying = true;
-//     playPause();
-//   } else {
-//     changeSong(1);
-//   }
-// }
-// function changeSong(dir) {
-//   if (dir === 1) {
-//     // next song
-//     indexSong++;
-//     if (indexSong >= musics.length) {
-//       indexSong = 0;
-//     }
-//     isPlaying = true;
-//   } else if (dir === -1) {
-//     // prev song
-//     indexSong--;
-//     if (indexSong < 0) {
-//       indexSong = musics.length - 1;
-//     }
-//     isPlaying = true;
-//   }
-//   init(indexSong);
-//   // song.setAttribute("src", `./music/${musics[indexSong].file}`);
-//   playPause();
-// }
-// playBtn.addEventListener("click", playPause);
-// function playPause() {
-//   if (isPlaying) {
-//     musicThumbnail.classList.add("is-playing");
-//     song.play();
-//     playBtn.innerHTML = `<ion-icon name="pause-circle"></ion-icon>`;
-//     isPlaying = false;
-//     timer = setInterval(displayTimer, 500);
-//   } else {
-//     musicThumbnail.classList.remove("is-playing");
-//     song.pause();
-//     playBtn.innerHTML = `<ion-icon name="play"></ion-icon>`;
-//     isPlaying = true;
-//     clearInterval(timer);
-//   }
-// }
-// function displayTimer() {
-//   const { duration, currentTime } = song;
-//   rangeBar.max = duration;
-//   rangeBar.value = currentTime;
-//   playTime.textContent = formatTimer(currentTime);
-//   if (!duration) {
-//     durationTime.textContent = "00:00";
-//   } else {
-//     durationTime.textContent = formatTimer(duration);
-//   }
-// }
+song.addEventListener("ended", handleEndedSong);
+function handleEndedSong() {
+    if (isRepeat) {
+        isPlaying = true;
+        playPause();
+    }
+    else {
+        changeSong(1)
+    }
+}
+
+let isRandom = false;
+playRandom.addEventListener("click", function () {
+    if (isRandom) {
+        isRandom = false;
+        playRandom.setAttribute('src', 'assets/icons/random-off.svg')
+    } else {
+        playRandom.setAttribute('src', 'assets/icons/random-on.svg')
+        isRandom = true;
+    }
+});
+
+song.addEventListener("ended", handleEndedSong);
+function handleEndedSong() {
+    if (isRandom) {
+        changeSong(-1);
+        isPlaying = true;
+        playPause();
+    }
+    else {
+        changeSong(1);
+    }
+}
+
+//set to change name , singer, avt music
+function init(indexSong) {
+    song.setAttribute('src', `./assets/musics/${musics[indexSong].file}`);
+    musicName.textContent = musics[indexSong].name;
+    singerName.textContent = musics[indexSong].singer;
+    musicImage.setAttribute("src", musics[indexSong].image);
+}
+init(indexSong);
 
 
-// function init(indexSong) {
-//   song.setAttribute("src", `./music/${musics[indexSong].file}`);
-//   musicImage.setAttribute("src", musics[indexSong].image);
-//   musicName.textContent = musics[indexSong].title;
-// }
-// displayTimer();
-// init(indexSong);
+let vol = document.querySelector("#volume-control");
+vol.addEventListener("input", function () {
+    song.volume = vol.value / 100;
+});
 
 
