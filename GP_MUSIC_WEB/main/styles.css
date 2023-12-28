@@ -143,6 +143,7 @@
 
 /* ------edit music bar for ALL PAGE */
 /*-----------------------------------------*/
+
 .music-bar {
     background-color: #000000;
     position: fixed;
@@ -159,7 +160,7 @@
     display: flex;
 }
 
-.avt-music {
+.music-thumb {
     background-color: white;
     margin: 2%;
     overflow: hidden;
@@ -168,7 +169,6 @@
 
 }
 
-.avt-music img {}
 
 .song-title {
     padding: 3%;
@@ -239,6 +239,7 @@
 .more-icon {
     margin: 0 5% 0 12%;
 }
+
 
 /*--------------------------------------LOG IN PAGE---------------------*/
 /*------------------------------------------------------------------------*/
