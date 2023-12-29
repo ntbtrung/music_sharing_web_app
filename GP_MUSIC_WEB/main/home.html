@@ -92,13 +92,40 @@
                 </div>
             </div>
             <div class="more-bar col-4">
-                <img class="more-icon" src="assets/icons/volume-up.svg" alt=""><input type="range" id="volume-control" class="range" value="40" >
+                <img class="more-icon" src="assets/icons/volume-up.svg" alt=""><input type="range" id="volume-control"
+                    class="range" value="30">
                 <img class="more-icon" src="assets/icons/download.svg" alt="">
                 <a href="musicpage.html"><img class="more-icon" src="assets/icons/zoom.svg" alt=""></a>
             </div>
         </div>
         <script src="musicbar.js"></script>
-
+        <div class="modal-upload close-modal">
+            <div class="modal-upload-block">
+                <div class="upload-header text-center my-3">
+                    <p>Share with us your music</p>
+                    <img class="close-modal" onclick="closemodal()" src="assets/icons/close.svg" alt="">
+                </div>
+                <div class="upload-body">
+                    <div>
+                        <label for="img-music-upload">Avatar music:</label>
+                        <input type="file" name="img-music-upload" id="img-music-upload" >
+                    </div>
+                    <div>
+                        <label for="song-name">Song:</label>
+                        <input type="text" name="song-name" id="song-name">
+                    </div>
+                    <div>
+                        <label for="singer-name">Singer/Artis:</label>
+                        <input type="text" name="singer-name" id="singer-name">
+                    </div>
+                    <div>
+                        <label for="file-music-upload">File music:</label>
+                        <input type="file" name="file-music-upload" id="file-music-upload">
+                    </div>
+                    <input type="submit" class="upload-file-btn" value="Upload">
+                </div>
+            </div>
+        </div>
         <!-- bodybar -->
         <div class="page-body-home m-0 row">
             <div class="left-home col-3">
@@ -110,15 +137,15 @@
                         <input type="search" placeholder="What's on your mind?" class="post-input">
                     </div>
                     <div class="post-box-2">
-                        <div class="btn-post p-0 col-3">
+                        <div class="btn-post p-0 col-3" onclick="openmodal()">
                             <img src="assets/icons/Mic_fill.svg" class="post-icon">
                             <div class="post-text">Audio file</div>
                         </div>
-                        <div class="btn-post p-0 col-4">
+                        <div class="btn-post p-0 col-4" onclick="openmodal()">
                             <img src="assets/icons/Img_box_fill.svg" class="post-icon">
                             <div class="post-text">Photo/Video</div>
                         </div>
-                        <div class="btn-post p-0 col-3">
+                        <div class="btn-post p-0 col-3" onclick="openmodal()">
                             <img src="assets/icons/happy.svg" class="post-icon">
                             <div class="post-text">Emotion</div>
                         </div>
@@ -129,9 +156,18 @@
             <div class="right-home col-3">
             </div>
         </div>
-
     </div>
 
 </body>
+<!-- scrip to upload-modal -->
+<script>
+    var modal = document.querySelector('.modal-upload');
+    function openmodal() {
+        modal.setAttribute('class','modal-upload open-modal')
+    }
+    function closemodal() {
+        modal.setAttribute('class','modal-upload close-modal')
+    }
+</script>
 
 </html>
