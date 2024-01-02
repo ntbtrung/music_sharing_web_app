@@ -4,7 +4,6 @@ $username = "root"; // Tên người dùng MySQL
 $password = ""; // Mật khẩu MySQL
 $dbname = "music_server"; // Tên cơ sở dữ liệu MySQL
 
-// Kết nối đến cơ sở dữ liệu
 $conn = new mysqli($servername, $username, $password, $dbname);
 
 

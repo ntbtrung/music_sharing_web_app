@@ -587,7 +587,7 @@
     justify-content: center;
     align-items: center;
     z-index: 1;
-    transition: 2s;
+    transition: 1s;
 
 }
 
@@ -616,6 +616,12 @@
 }
 
 .close-modal {
+    top: 50%;
+    left: 50%;
+    height: 0;
+    width: 0;
+}
+.close-btn{
     position: absolute;
     top: 2%;
     right: 2%;
