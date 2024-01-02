@@ -17,21 +17,29 @@ if (isset($_POST['btn-register'])) {
     $password = $_POST['password'];
 
     // Kiểm tra username và email trước khi thêm vào cơ sở dữ liệu
-    $check_duplicate_sql = "SELECT * FROM user WHERE username`='$username' OR email`='$email'";
+    $check_duplicate_sql = "SELECT * FROM user WHERE `username`='$username' OR `email`='$email'";
     $result = $conn->query($check_duplicate_sql);
 
     if ($result->num_rows > 0) {
         // Nếu đã tồn tại username hoặc email, hiển thị thông báo lỗi
         echo '<script>alert("Username or email already exists. Please choose a different one.")</script>';
+        echo '<script>window.location.href = "regis_login.html";</script>';
+        exit();
+
+
     } else {
         // Nếu chưa tồn tại, thêm vào cơ sở dữ liệu
         $insert_sql = "INSERT INTO user`(username`,`email`,`password`)
         VALUES ('$username','$email', md5('$password'))";
 
         if ($conn->query($insert_sql) === TRUE) {
-            echo '<script>alert("Insert data complete")</script>';
+            echo '<script>alert("Register successful! Login Now")</script>';
+            echo '<script>window.location.href = "regis_login.html";</script>';
+        exit();
         } else {
-            echo "Error{$insert_sql}" . $conn->error;
+        echo '<script>alert("Something wrong! Please re enter")</script>';
+        echo '<script>window.location.href = "regis_login.html";</script>';
+        exit();
         }
     }
 }
