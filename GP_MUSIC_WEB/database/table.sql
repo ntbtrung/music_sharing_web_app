@@ -2,8 +2,8 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1:3307
--- Generation Time: Dec 26, 2023 at 09:31 AM
+-- Host: 127.0.0.1
+-- Generation Time: Jan 02, 2024 at 09:04 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `music server`
+-- Database: `music_server`
 --
 
 -- --------------------------------------------------------
@@ -107,26 +107,18 @@ ALTER TABLE `song`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `id` (`id`,`username`),
+  ADD UNIQUE KEY `username` (`username`),
   ADD UNIQUE KEY `email` (`email`);
 
 --
--- Constraints for dumped tables
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- Constraints for table `comment`
+-- AUTO_INCREMENT for table `user`
 --
-ALTER TABLE `comment`
-  ADD CONSTRAINT `comment_author_id` FOREIGN KEY (`author_id`) REFERENCES `user` (`id`),
-  ADD CONSTRAINT `comment_post_id` FOREIGN KEY (`post_id`) REFERENCES `post` (`id`);
-
---
--- Constraints for table `post`
---
-ALTER TABLE `post`
-  ADD CONSTRAINT `post_author_id` FOREIGN KEY (`author_id`) REFERENCES `user` (`id`),
-  ADD CONSTRAINT `post_song_id` FOREIGN KEY (`song_id`) REFERENCES `song` (`id`);
+ALTER TABLE `user`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
