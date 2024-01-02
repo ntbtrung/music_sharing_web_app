@@ -159,7 +159,7 @@ function handleEndedSong() {
 
 //set to change name , singer, avt music
 function init(indexSong) {
-    song.setAttribute('src', `./assets/musics/${musics[indexSong].file}`);
+    song.setAttribute('src', `./assets/upload/musics/${musics[indexSong].file}`);
     musicName.textContent = musics[indexSong].name;
     singerName.textContent = musics[indexSong].singer;
     musicImage.setAttribute("src", musics[indexSong].image);

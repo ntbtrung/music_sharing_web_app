@@ -138,3 +138,55 @@
 </body>
 
 </html>
+<?php
+$servername = "localhost"; // Địa chỉ máy chủ MySQL
+$username = "root"; // Tên người dùng MySQL
+$password = ""; // Mật khẩu MySQL
+$dbname = "music_server"; // Tên cơ sở dữ liệu MySQL
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+
+if ($conn->connect_error) {
+    die("Fail to connect to sever: " . $conn->connect_error);
+}
+echo '<script>alert("Connect to sever complete")</script>';
+
+
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["btn-register"])) {
+    $username = $_POST['username'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+
+    $sql = "INSERT INTO `user`(`username`,`email`,`password`)
+    VALUES ('$username','$email', '$password')";
+
+    if ($conn->query($sql) === TRUE) {
+        echo '<script>alert("Insert data complete")</script>';
+    } else {
+        echo "Error{$sql}" . $conn->error;
+    }
+}
+
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["btn-login"])) {
+    // Nhận dữ liệu từ form
+    $username = htmlspecialchars($_POST["username_lg"]);
+    $password = htmlspecialchars(md5($_POST["password_lg"]));
+
+    // Kiểm tra đăng nhập
+    $sql = "SELECT * FROM `user` WHERE `username` = '$username' AND `password` = '$password'";
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+        // Đăng nhập thành công
+        echo "Login successful!";
+        // Redirect hoặc thực hiện các hành động khác ở đây
+    } else {
+        // Đăng nhập không thành công
+        echo "Login failed. Please check your username and password.";
+    }
+}
+
+// Đóng kết nối
+$conn->close();
+?>
