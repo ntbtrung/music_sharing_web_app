@@ -67,13 +67,14 @@ CREATE TABLE `song` (
 --
 
 CREATE TABLE `user` (
-  `id` int(10) UNSIGNED NOT NULL,
+  `id` INT(10) NOT NULL AUTO_INCREMENT,
   `username` varchar(50) NOT NULL,
   `password` varchar(50) NOT NULL,
   `nickname` varchar(50) NOT NULL,
   `email` varchar(50) NOT NULL,
   `avatar` varchar(200) NOT NULL,
-  `biography` varchar(500) DEFAULT NULL
+  `biography` varchar(500) DEFAULT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
