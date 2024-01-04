@@ -38,9 +38,8 @@ const musics = [
         image:
             "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLndv1ULQ_r1wftMh9_E4qoljiMrgAGHD0Iw&usqp=CAU"
     },
-    
-];
 
+];
 // set to play a song and nex, prev button
 let isPlaying = true;
 let indexSong = 0;
