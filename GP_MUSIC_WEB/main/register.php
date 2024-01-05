@@ -17,7 +17,7 @@ if (isset($_POST['btn-register'])) {
     $password = $_POST['password'];
 
     // Kiểm tra username và email trước khi thêm vào cơ sở dữ liệu
-    $check_duplicate_sql = "SELECT * FROM user WHERE `username`='$username' OR `email`='$email'";
+    $check_duplicate_sql = "SELECT * FROM user WHERE `username`= '$username' OR `email`='$email'";
     $result = $conn->query($check_duplicate_sql);
 
     if ($result->num_rows > 0) {
@@ -29,17 +29,18 @@ if (isset($_POST['btn-register'])) {
 
     } else {
         // Nếu chưa tồn tại, thêm vào cơ sở dữ liệu
-        $insert_sql = "INSERT INTO user`(username`,`email`,`password`)
-        VALUES ('$username','$email', md5('$password'))";
+        $insert_sql = "INSERT INTO `user` (`username`, `email`, `password`)
+               VALUES ('$username', '$email', MD5('$password'))";
+
 
         if ($conn->query($insert_sql) === TRUE) {
             echo '<script>alert("Register successful! Login Now")</script>';
             echo '<script>window.location.href = "regis_login.html";</script>';
-        exit();
+            exit();
         } else {
-        echo '<script>alert("Something wrong! Please re enter")</script>';
-        echo '<script>window.location.href = "regis_login.html";</script>';
-        exit();
+            echo '<script>alert("Something wrong! Please re enter")</script>';
+            echo '<script>window.location.href = "regis_login.html";</script>';
+            exit();
         }
     }
 }
