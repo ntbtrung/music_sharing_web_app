@@ -98,6 +98,28 @@
             </div>
         </div>
         <script src="musicbar.js"></script>
+
+        <!--Modal Overlay-->
+        <div class="modal-upload close-modal">
+            <form class="modal-upload-block" action="upload.php" enctype="multipart/form-data" method="post">
+                <div class="upload-header text-center my-3">
+                    <p>CUSTOMIZE YOUR PROFILE!</p>
+                    <img class="close-btn" onclick="closemodal()" src="assets/icons/close.svg" alt="">
+                </div>
+                <div class="upload-body">
+                    <div>
+                        <label for="img-music-upload">Avatar:</label>
+                        <input type="file" name="img-music-upload" id="img-music-upload" accept=".jpg" required>
+                    </div>
+                    <div>
+                        <label for="file-music-upload">Profile:</label>
+                        <input type="file" name="file-music-upload" id="file-music-upload" accept=".mp3" required>
+                    </div>
+                    <input type="submit" class="upload-file-btn" value="Upload">
+                </div>
+            </form>
+        </div>
+
         <!-- bodybar -->
         <div class="page-body-profile m-0 row">
             <div class="left-profile col-1"></div>
@@ -108,14 +130,10 @@
                 </div>
                 <div class="share-frame-btn m-0 row">
 
-                    <!-- Avatar Upload -->
-                    <div class="share-btn mr-1">
+                    <!-- Avatar and Background Modal Overlay Upload -->
+                    <div class="share-btn mr-auto" onclick="openmodal()">
                         <img class="upload-icon" src="assets/icons/Camera_fill.svg" alt="">
-                        <div class="upload-title">Avatar</div>
-                    </div>
-                    <div class="share-btn mr-auto">
-                        <img class="upload-icon" src="assets/icons/Camera_fill.svg" alt="">
-                        <div class="upload-title">Background</div>
+                        <div class="upload-title">Profile</div>
                     </div>
                     <div class="share-btn mr-1">
                         <img class="share-icon " src="assets/icons/Edit_fill.svg" alt="">
@@ -164,6 +182,18 @@
             <div class="right-profile col-1 "></div>
         </div>
     </div>
+
+<!-- scrip to upload-modal -->
+<script>
+    var modal = document.querySelector('.modal-upload');
+    function openmodal() {
+        modal.setAttribute('class','modal-upload open-modal')
+    }
+    function closemodal() {
+        modal.setAttribute('class','modal-upload close-modal')
+    }
+</script>
+
 </body>
 
 </html>
