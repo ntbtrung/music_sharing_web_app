@@ -107,15 +107,14 @@
                     <img class="close-btn" onclick="closemodal()" src="assets/icons/close.svg" alt="">
                 </div>
                 <div class="upload-body">
-                    <div>
-                        <label for="img-music-upload">Avatar:</label>
-                        <input type="file" name="img-music-upload" id="img-music-upload" accept=".jpg" required>
-                    </div>
-                    <div>
-                        <label for="file-music-upload">Profile:</label>
-                        <input type="file" name="file-music-upload" id="file-music-upload" accept=".mp3" required>
-                    </div>
-                    <input type="submit" class="upload-file-btn" value="Upload">
+                    <form action="/uploadAvatar" enctype="multipart/form-data" method="post">
+                        <input type="file" name="avatar" accept='image/*' >
+                        <input type="submit" value="Upload Avatar">
+                    </form>
+                    <form action="/uploadCoverPhoto" enctype="multipart/form-data" method="post">
+                        <input type="file" name="coverPhoto" accept='image/*' >
+                        <input type="submit" value="Upload Cover Photo">
+                    </form>
                 </div>
             </form>
         </div>
