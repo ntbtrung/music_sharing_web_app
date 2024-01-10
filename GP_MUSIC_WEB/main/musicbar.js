@@ -16,28 +16,45 @@ const playRandom = document.querySelector(".play-random")
 const musics = [
     {
         id: 1,
-        name: "Memes",
-        singer: "NIVIRO",
-        file: "memes.mp3",
+        name: "Anh Nho Ra",
+        singer: "Vũ.",
+        file: "Anh Nhớ Ra.mp3",
         image:
-            "https://avatar-ex-swe.nixcdn.com/song/2018/05/04/c/0/e/0/1525423206353_640.jpg",
+            "Anh_nho_ra.jpg"
     },
     {
         id: 2,
-        name: "Never be alone",
-        singer: "ThefatRat",
-        file: "neverbealone.mp3",
+        name: "Bao Tien Mo Binh Yen",
+        singer: "14Cosper ft Bon",
+        file: "Bao Tiền.mp3",
         image:
-            "https://i1.sndcdn.com/artworks-000104960955-urm1jm-t500x500.jpg",
+            "baotien.jpg",
     },
     {
         id: 3,
-        name: "See you again",
-        singer: "Charlie puth",
-        file: "seeyouagain.mp3",
+        name: "Có em",
+        singer: "Madihu ft LowG",
+        file: "Có Em.mp3",
         image:
-            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLndv1ULQ_r1wftMh9_E4qoljiMrgAGHD0Iw&usqp=CAU"
+            "co_em.jpg"
     },
+    {
+        id: 4,
+        name: "Thang Dien",
+        singer: "Justasuy ft AndreeLeftHand",
+        file: "Thang Dien.mp3",
+        image:
+            "thangdien.jpg"
+    },
+    {
+        id: 5,
+        name: "Thich Em Hoi Nhieu",
+        singer: "Wren Evan",
+        file: "Thích Em Hơi Nhiều.mp3",
+        image:
+            "thichem.jpg"
+    },
+
 ];
 // set to play a song and nex, prev button
 let isPlaying = true;
@@ -160,7 +177,7 @@ function init(indexSong) {
     song.setAttribute('src', `./assets/upload/musics/${musics[indexSong].file}`);
     musicName.textContent = musics[indexSong].name;
     singerName.textContent = musics[indexSong].singer;
-    musicImage.setAttribute("src", musics[indexSong].image);
+    musicImage.setAttribute("src", `./assets/upload/avt-music/${musics[indexSong].image}`);
 }
 init(indexSong);
 
