@@ -92,7 +92,8 @@
                 </div>
             </div>
             <div class="more-bar col-4">
-                <img class="more-icon" src="assets/icons/volume-up.svg" alt=""><input type="range" id="volume-control" class="range" value="30" >
+                <img class="more-icon" src="assets/icons/volume-up.svg" alt=""><input type="range" id="volume-control"
+                    class="range" value="30">
                 <img class="more-icon" src="assets/icons/download.svg" alt="">
                 <a href="musicpage.html"><img class="more-icon" src="assets/icons/zoom.svg" alt=""></a>
             </div>
@@ -101,22 +102,24 @@
 
         <!--Modal Overlay-->
         <div class="modal-upload close-modal">
-            <form class="modal-upload-block" action="upload.php" enctype="multipart/form-data" method="post">
+            <div class="modal-upload-block">
                 <div class="upload-header text-center my-3">
                     <p>CUSTOMIZE YOUR PROFILE!</p>
                     <img class="close-btn" onclick="closemodal()" src="assets/icons/close.svg" alt="">
                 </div>
                 <div class="upload-body">
                     <form action="/uploadAvatar" enctype="multipart/form-data" method="post">
-                        <input type="file" name="avatar" accept='image/*' >
+                        <label>Avatar:</label>
+                        <input type="file" name="avatar" accept='image/*'>
                         <input type="submit" value="Upload Avatar">
                     </form>
                     <form action="/uploadCoverPhoto" enctype="multipart/form-data" method="post">
-                        <input type="file" name="coverPhoto" accept='image/*' >
+                        <label>Background:</label>
+                        <input type="file" name="coverPhoto" accept='image/*'>
                         <input type="submit" value="Upload Cover Photo">
                     </form>
                 </div>
-            </form>
+            </div>
         </div>
 
         <!-- bodybar -->
@@ -154,12 +157,58 @@
                             <div class="menu-name p-0 col-2">Reports</div>
                         </div>
                         <div class="track-frame-bar">
-                            <div class="noti-track">
-                                <img class="noti-icon my-5" src="assets/icons/Frame.svg" alt="">
-                                <div class="noti-message-1 my-1">Seems a little quiet over here</div>
-                                <div class="noti-message-2 my-1">Upload a track to share it with your followers</div>
-                                <div class="upload-btn-track my-3">Upload now</div>
+                            <div class="sound-items">
+                                <div class="sound-item-avt"></div>
+                                <div class="sound-item-name">Đom Đóm</div>
+                                <div class="sound-item-singer">J97</div>
                             </div>
+                            <div class="sound-items">
+                                <div class="sound-item-avt"></div>
+                                <div class="sound-item-name">Đom Đóm</div>
+                                <div class="sound-item-singer">J97</div>
+                            </div>
+                            <div class="sound-items">
+                                <div class="sound-item-avt"></div>
+                                <div class="sound-item-name">Đom Đóm</div>
+                                <div class="sound-item-singer">J97</div>
+                            </div>
+                            <div class="sound-items">
+                                <div class="sound-item-avt"></div>
+                                <div class="sound-item-name">Đom Đóm</div>
+                                <div class="sound-item-singer">J97</div>
+                            </div>
+                            <div class="sound-items">
+                                <div class="sound-item-avt"></div>
+                                <div class="sound-item-name">Đom Đóm</div>
+                                <div class="sound-item-singer">J97</div>
+                            </div>
+                            <div class="sound-items">
+                                <div class="sound-item-avt"></div>
+                                <div class="sound-item-name">Đom Đóm</div>
+                                <div class="sound-item-singer">J97</div>
+                            </div>
+                            <div class="sound-items">
+                                <div class="sound-item-avt"></div>
+                                <div class="sound-item-name">Đom Đóm</div>
+                                <div class="sound-item-singer">J97</div>
+                            </div>
+                            <div class="sound-items">
+                                <div class="sound-item-avt"></div>
+                                <div class="sound-item-name">Đom Đóm</div>
+                                <div class="sound-item-singer">J97</div>
+                            </div>
+                            <div class="sound-items">
+                                <div class="sound-item-avt"></div>
+                                <div class="sound-item-name">Đom Đóm</div>
+                                <div class="sound-item-singer">J97</div>
+                            </div>
+                            <div class="sound-items">
+                                <div class="sound-item-avt"></div>
+                                <div class="sound-item-name">Đom Đóm</div>
+                                <div class="sound-item-singer">J97</div>
+                            </div>
+
+
                         </div>
                     </div>
                     <div class="info-frame p-0 col-4">
@@ -182,16 +231,16 @@
         </div>
     </div>
 
-<!-- scrip to upload-modal -->
-<script>
-    var modal = document.querySelector('.modal-upload');
-    function openmodal() {
-        modal.setAttribute('class','modal-upload open-modal')
-    }
-    function closemodal() {
-        modal.setAttribute('class','modal-upload close-modal')
-    }
-</script>
+    <!-- scrip to upload-modal -->
+    <script>
+        var modal = document.querySelector('.modal-upload');
+        function openmodal() {
+            modal.setAttribute('class', 'modal-upload open-modal')
+        }
+        function closemodal() {
+            modal.setAttribute('class', 'modal-upload close-modal')
+        }
+    </script>
 
 </body>
 

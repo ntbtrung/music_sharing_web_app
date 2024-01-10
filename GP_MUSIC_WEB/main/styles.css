@@ -7,6 +7,20 @@
     box-sizing: border-box;
     transition: 0.5s;
     font-family: "Poppins";
+    
+    ::-webkit-scrollbar {
+        width: 10px;
+      }
+      
+      ::-webkit-scrollbar-track {
+        background-color: #176b87;
+        border-radius: 5px;
+      }
+      
+      ::-webkit-scrollbar-thumb {
+        box-shadow: inset 0 0 5px rgba(255, 255, 255, 1);
+        border-radius: 5px;
+      }
 }
 
 
@@ -15,7 +29,7 @@
 
 .navigation-bar {
     width: 100%;
-    height: 80px;
+    height: 8vh;
     background-color: #04364a;
 
 }
@@ -156,7 +170,7 @@
 }
 
 .avt-bar {
-    height: 9vh;
+    height: 8vh;
     display: flex;
 }
 
@@ -461,16 +475,15 @@
 
 /*left colum for HOME*/
 .left-home {
-    height: 800px;
+    height: 92vh;
     /* chi dung de show*/
-    /* height: fit-content; */
     background-color: #04364a;
 
 }
 
 /*feed colum for HOME*/
 .feed-home {
-    height: 800px;
+    height: 92vh;
     /* chi dung de show*/
     /* height: fit-content; */
     background-color: #155c74;
@@ -558,9 +571,7 @@
 }
 
 .post-frame {
-    height: 500px;
-    /* chi dung de show*/
-    /* height: max-content; */
+    height: max-content;
     background-color: #04364a;
     border-radius: 10px;
     overflow: hidden;
@@ -569,7 +580,7 @@
 
 /*right colum for HOME*/
 .right-home {
-    height: 800px;
+    height: 92vh;
     /* chi dung de show*/
     /* height: fit-content; */
     background-color: #04364a;
@@ -698,7 +709,7 @@
 
 /*left colum for LIBRARY*/
 .left-library {
-    height: 1000px;
+    height: 1050px;
     /* chi dung de show*/
     /* height: fit-content; */
     background-color: #04364a;
@@ -707,7 +718,7 @@
 
 /*feed colum for LIBRARY*/
 .feed-library {
-    height: 800px;
+    height: 1050px;
     /* chi dung de show*/
     /* height: fit-content; */
     background-color: #155c74;
@@ -818,16 +829,16 @@
 .noti-bg {
     background-color: #155c74;
     width: 100%;
-    height: 100vh;
+    height: fit-content
 }
 
 .right-noti {
-    height: 100%;
+    height: 92vh;
     background-color: #155c74;
 }
 
 .main-noti {
-    height: 100%;
+    height: 92vh;
     background-color: #04364a;
 }
 
@@ -879,9 +890,8 @@
 
 /*left colum for LIBRARY*/
 .left-chat {
-    height: 1000px;
     /* chi dung de show*/
-    /* height: fit-content; */
+    height: 92vh;
     background-color: #04364a;
 
 }
@@ -937,7 +947,7 @@
 }
 
 .show-frame-chat {
-    height: 500px;
+    height: 63vh;
     overflow-y: scroll;
 }
 
@@ -1004,7 +1014,7 @@
 }
 
 .left-profile {
-    height: 1000px;
+    height: 92vh;
     /* chi dung de show*/
     /* height: fit-content; */
     background-color: #155c74;
@@ -1012,14 +1022,14 @@
 }
 
 .feed-profile {
-    height: 1000px;
+    height: fit-content;
     background-color: #155c74;
 
 }
 
 .profile-frame {
     width: 100%;
-    height: 30%;
+    height: 30vh;
     background-color: #04364a;
     border-radius: 0px 0px 10px 10px;
     position: relative;
@@ -1076,9 +1086,9 @@
 }
 
 .avt-icon {
-    margin: 6%;
-    width: 200px;
-    height: 200px;
+    margin: 3%;
+    width: 170px;
+    height: 170px;
     background-color: #176b87;
     border-radius: 50%;
 }
@@ -1152,7 +1162,9 @@
 .track-frame-bar {
     background-color: #176b87;
     text-align: center;
-
+    height: 37vh;
+    overflow-y: scroll;
+    border-radius: 10px;
 }
 
 .noti-track {
@@ -1194,7 +1206,7 @@
 }
 
 .info-frame {
-    height: 350px;
+    height: 44vh;
     /* chi dung de show*/
     /* height: fit-content; */
     background-color: #176b87;
@@ -1232,11 +1244,48 @@
 }
 
 .right-profile {
-    height: 1000px;
     /* chi dung de show*/
     /* height: fit-content; */
     background-color: #155c74;
 
+}
+.upload-body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sound-items{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 1%;
+}
+.sound-items:hover{
+    background-color: #3595b5;   
+    border-radius: 5px; 
+}
+.sound-item-avt{
+    height: 60px;
+    width: 60px;
+    background: #ffffff;
+    border-radius: 5px;
+    margin-right: 20%;
+}
+.sound-item-name {
+    font-weight: 500;
+    font-size: 16px;
+}
+.sound-item-singer{
+    font-weight: 500;
+    font-size: 16px;
+    font-style: italic;
+}
+
+.sound-item-singer::before{
+    content: "-";
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 
@@ -1247,7 +1296,7 @@
 .abt-bg {
     background-color: #155c74;
     width: 100%;
-    height: 150vh;
+    height: fit-content;
 }
 
 .main-abt {
