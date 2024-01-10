@@ -54,12 +54,13 @@ CREATE TABLE `post` (
 --
 
 CREATE TABLE `song` (
-  `id` int(10) UNSIGNED NOT NULL,
-  `name` varchar(50) NOT NULL,
-  `genre` varchar(50) NOT NULL,
-  `Artis` varchar(250) NOT NULL,
-  `url` varchar(250) NOT NULL,
-  `avatar_music_url` varchar(250) NOT NULL
+  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(50) NOT NULL,
+  `genre` VARCHAR(50) NOT NULL,
+  `Artis` VARCHAR(250) NOT NULL,
+  `url` VARCHAR(250) NOT NULL,
+  `avatar_music_url` VARCHAR(250) NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -106,7 +107,7 @@ ALTER TABLE `post`
 -- Indexes for table `song`
 --
 ALTER TABLE `song`
-  ADD PRIMARY KEY (`id`);
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for dumped tables

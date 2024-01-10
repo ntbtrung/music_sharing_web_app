@@ -156,8 +156,8 @@
                             <div class="menu-name p-0 col-2">Playlists</div>
                             <div class="menu-name p-0 col-2">Reports</div>
                         </div>
-                        <div class="track-frame-bar">
-                            <div class="sound-items">
+                        <div class="track-frame-bar" >
+                            <!-- <div class="sound-items">
                                 <div class="sound-item-avt"></div>
                                 <div class="sound-item-name">Đom Đóm</div>
                                 <div class="sound-item-singer">J97</div>
@@ -206,14 +206,12 @@
                                 <div class="sound-item-avt"></div>
                                 <div class="sound-item-name">Đom Đóm</div>
                                 <div class="sound-item-singer">J97</div>
-                            </div>
-
-
+                            </div> -->
                         </div>
                     </div>
                     <div class="info-frame p-0 col-4">
                         <div class="show-info w-100">
-                            <div class="info-title">Followers
+                            <div class="info-title" style="height: fit-content; width: 50px;">Followers
                                 <div class="info-number">100</div>
                             </div>
                             <div class="info-title">Following
@@ -225,12 +223,27 @@
                         </div>
                     </div>
                 </div>
-
             </div>
             <div class="right-profile col-1 "></div>
         </div>
     </div>
-
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        // Sử dụng jQuery để thực hiện AJAX và cập nhật danh sách nhạc
+        $(document).ready(function () {
+            $.ajax({
+                url: 'get_music.php',
+                type: 'GET',
+                dataType: 'html',
+                success: function (response) {
+                    $('.track-frame-bar').html(response);
+                },
+                error: function (error) {
+                    console.log('Error:', error);
+                }
+            });
+        });
+    </script>
     <!-- scrip to upload-modal -->
     <script>
         var modal = document.querySelector('.modal-upload');
