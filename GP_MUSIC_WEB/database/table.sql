@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 04, 2024 at 09:37 AM
+-- Generation Time: Jan 12, 2024 at 10:31 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.0.28
 
@@ -37,6 +37,36 @@ CREATE TABLE `comment` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `library`
+--
+
+CREATE TABLE `library` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `Artis` varchar(250) NOT NULL,
+  `url` varchar(250) NOT NULL,
+  `avatar_music_url` varchar(250) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `library`
+--
+
+INSERT INTO `library` (`id`, `name`, `Artis`, `url`, `avatar_music_url`) VALUES
+(1, 'Anh Nhớ Ra', 'Vũ', 'assets/library/musics-library/Anh Nhớ Ra.mp3', 'assets/library/avt-music-library/anh_nho_ra.jpg'),
+(2, 'Bao Tiền', '14Cosper ft Bon', 'assets/library/musics-library/Bao Tiền.mp3', 'assets/library/avt-music-library/bao_tien_mot_binh_yen.jpg'),
+(3, 'Có em', 'Madihu ft LowG', 'assets/library/musics-library/Có Em.mp3', 'assets/library/avt-music-library/co_em.jpg'),
+(4, 'Thằng điên', 'Justatee ft Andree', 'assets/library/musics-library/Thang Dien.mp3', 'assets/library/avt-music-library/thang_dien.jpg'),
+(5, 'Thích em hơi nhiều', 'Wren Evan', 'assets/library/musics-library/Thích Em Hơi Nhiều.mp3', 'assets/library/avt-music-library/thich_em_hoi_nhieu.jpg'),
+(6, 'See you again', 'Chalie Puth', 'assets/library/musics-library/See You Again.mp3', 'assets/library/avt-music-library/see_you_again.jpg'),
+(7, 'Somthing Just Like This', 'Coldplay', 'assets/library/musics-library/Something Just Like This.mp3', 'assets/library/avt-music-library/somthing_just_like_this.jpg'),
+(8, 'Sugar', 'Marron 5', 'assets/library/musics-library/Sugar.mp3', 'assets/library/avt-music-library/sugar.jpg'),
+(9, 'What You Came For', 'Rihanna', 'assets/library/musics-library/This Is What You Came For.mp3', 'assets/library/avt-music-library/this_is_what_you_came_for.jpg'),
+(10, 'What Do You Mean', 'Justin Bieber', 'assets/library/musics-library/What Do You Mean.mp3', 'assets/library/avt-music-library/what_do_you_mean.jpg');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `post`
 --
 
@@ -54,14 +84,19 @@ CREATE TABLE `post` (
 --
 
 CREATE TABLE `song` (
-  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `name` VARCHAR(50) NOT NULL,
-  `genre` VARCHAR(50) NOT NULL,
-  `Artis` VARCHAR(250) NOT NULL,
-  `url` VARCHAR(250) NOT NULL,
-  `avatar_music_url` VARCHAR(250) NOT NULL,
-  PRIMARY KEY (`id`)
+  `id` int(10) UNSIGNED NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `Artis` varchar(250) NOT NULL,
+  `url` varchar(250) NOT NULL,
+  `avatar_music_url` varchar(250) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `song`
+--
+
+INSERT INTO `song` (`id`, `name`, `Artis`, `url`, `avatar_music_url`) VALUES
+(1, 'Vinh', 'ngu', 'assets/upload/musics/Ái nộ.mp3', 'assets/upload/avt-music/image.jpg');
 
 -- --------------------------------------------------------
 
@@ -70,17 +105,14 @@ CREATE TABLE `song` (
 --
 
 CREATE TABLE `user` (
-  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `id` int(10) UNSIGNED NOT NULL,
   `username` varchar(50) NOT NULL,
   `password` varchar(50) NOT NULL,
   `nickname` varchar(50) NOT NULL,
   `email` varchar(50) NOT NULL,
   `avatar` varchar(200) NOT NULL,
   `cover_photo` varchar(200) NOT NULL,
-  `biography` varchar(500) DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `username` (`username`),
-  UNIQUE KEY `email` (`email`)
+  `biography` varchar(500) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -95,6 +127,12 @@ ALTER TABLE `comment`
   ADD KEY `comment_post_id` (`post_id`);
 
 --
+-- Indexes for table `library`
+--
+ALTER TABLE `library`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `post`
 --
 ALTER TABLE `post`
@@ -107,11 +145,31 @@ ALTER TABLE `post`
 -- Indexes for table `song`
 --
 ALTER TABLE `song`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `user`
+--
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `username` (`username`),
+  ADD UNIQUE KEY `email` (`email`);
 
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `library`
+--
+ALTER TABLE `library`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT for table `song`
+--
+ALTER TABLE `song`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `user`

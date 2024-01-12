@@ -28,7 +28,5 @@ while ($row = $result->fetch_assoc()) {
     echo "</div>";
 }
 
-
-// Đóng kết nối cơ sở dữ liệu
 $conn->close();
 ?>

@@ -92,7 +92,8 @@
                 </div>
             </div>
             <div class="more-bar col-4">
-                <img class="more-icon" src="assets/icons/volume-up.svg" alt=""><input type="range" id="volume-control" class="range" value="30" >
+                <img class="more-icon" src="assets/icons/volume-up.svg" alt=""><input type="range" id="volume-control"
+                    class="range" value="30">
                 <img class="more-icon" src="assets/icons/download.svg" alt="">
                 <a href="musicpage.html"><img class="more-icon" src="assets/icons/zoom.svg" alt=""></a>
             </div>
@@ -103,82 +104,16 @@
             <div class="left-library col-3">
             </div>
             <div class="feed-library col-9">
-
                 <div class="frame-libraby">
-                    <div class="frame-title">Playlist Vpop</div>
-                    <div class="frame-line">
-                        <div class="playlist-items">
-                            <img src="assets/upload/avt-music/Anh_nho_ra.jpg" class="playlist-item-avt">
-                            <div class="playlist-item-name">Anh Nho Ra</div>
-                            <div class="playlist-item-singer">Vũ.</div>
-                            <audio controls src="assets/upload/musics/Anh Nhớ Ra.mp3"></audio>
-                        </div>
-                        <div class="playlist-items">
-                            <img src="assets/upload/avt-music/baotien.jpg" class="playlist-item-avt">
-                            <div class="playlist-item-name">Bao Tien Mo Binh Yen</div>
-                            <div class="playlist-item-singer">14Cosper ft Bon</div>
-                            <audio controls src="assets/upload/musics/Bao Tiền.mp3"></audio>
-                        </div>
-                        <div class="playlist-items">
-                            <img src="assets/upload/avt-music/co_em.jpg" class="playlist-item-avt">
-                            <div class="playlist-item-name">Co Em</div>
-                            <div class="playlist-item-singer">Madihu ft LowG</div>
-                            <audio controls src="assets/upload/musics/Có Em.mp3"></audio>
-                        </div>
-                        <div class="playlist-items">
-                            <img src="assets/upload/avt-music/thangdien.jpg" class="playlist-item-avt">
-                            <div class="playlist-item-name">Thang Dien</div>
-                            <div class="playlist-item-singer">Justatee ft Andree</div>
-                            <audio controls src="assets/upload/musics/Thang Dien.mp3"></audio>
-                        </div>
-                        <div class="playlist-items">
-                            <img src="assets/upload/avt-music/thichem.jpg" class="playlist-item-avt">
-                            <div class="playlist-item-name">Thich Em Hoi Nhieu</div>
-                            <div class="playlist-item-singer">Wren Evan</div>
-                            <audio controls src="assets/upload/musics/Thích Em Hơi Nhiều.mp3"></audio>
-                        </div>
-                    </div>
-                </div>
-                <div class="frame-libraby">
-                    <div class="frame-title">Playlist US-UK</div>
-                    <div class="frame-line">
-                        <div class="playlist-items">
-                            <img src="assets/upload/avt-music/seeyouagain.jpg" class="playlist-item-avt">
-                            <div class="playlist-item-name">See You Again</div>
-                            <div class="playlist-item-singer">Chalie Puth</div>
-                            <audio controls src="assets/upload/musics/See You Again (feat. Charlie Puth).mp3"></audio>
-                        </div>
-                        <div class="playlist-items">
-                            <img src="assets/upload/avt-music/somthing.jpg" class="playlist-item-avt">
-                            <div class="playlist-item-name">Somthing Just Like This</div>
-                            <div class="playlist-item-singer">Coldplay</div>
-                            <audio controls src="assets/upload/musics/Something Just Like This.mp3"></audio>
-                        </div>
-                        <div class="playlist-items">
-                            <img src="assets/upload/avt-music/sugar.jpg" class="playlist-item-avt">
-                            <div class="playlist-item-name">Sugar</div>
-                            <div class="playlist-item-singer">Marron 5</div>
-                            <audio controls src="assets/upload/musics/Sugar.mp3"></audio>
-                        </div>
-                        <div class="playlist-items">
-                            <img src="assets/upload/avt-music/thisis.jpg" class="playlist-item-avt">
-                            <div class="playlist-item-name">What You Came For</div>
-                            <div class="playlist-item-singer">Rihanna</div>
-                            <audio controls src="assets/upload/musics/This Is What You Came For.mp3"></audio>
-                        </div>
-                        <div class="playlist-items">
-                            <img src="assets/upload/avt-music/whatdo.jpg" class="playlist-item-avt">
-                            <div class="playlist-item-name">What Do You Mean</div>
-                            <div class="playlist-item-singer">Justin Bieber</div>
-                            <audio controls src="assets/upload/musics/What Do You Mean.mp3"></audio>
-                        </div>
+                    <div class="frame-title">Popular Playlist: </div>
+                    <div class="frame-line" id="playlist-vpop">
                     </div>
                 </div>
                 <div class="frame-libraby">
                     <div class="frame-title">Music Videos</div>
                     <div class="frame-line">
                         <div class="video-items">
-                            <video controls class="video-item"  src="assets/upload/musics/sugar.mp4"></video>
+                            <video controls class="video-item" src="assets/upload/musics/sugar.mp4"></video>
                             <div class="video-item-name">Sugar</div>
                             <div class="video-item-singer">Maroon 5</div>
                         </div>
@@ -196,6 +131,23 @@
                 </div>
             </div>
         </div>
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+        <script>
+            // Sử dụng jQuery để thực hiện AJAX và cập nhật danh sách nhạc
+            $(document).ready(function () {
+                $.ajax({
+                    url: 'show_library.php',
+                    type: 'GET',
+                    dataType: 'html',
+                    success: function (response) {
+                        $('#playlist-vpop').html(response);
+                    },
+                    error: function (error) {
+                        console.log('Error:', error);
+                    }
+                });
+            });
+        </script>
     </div>
 </body>
 
