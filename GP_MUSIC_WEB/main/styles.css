@@ -764,9 +764,10 @@
     position: relative;
     overflow: hidden;
 }
-.playlist-items audio{
+
+.playlist-items audio {
     position: absolute;
-    top : 76%;
+    top: 76%;
     width: 0;
 }
 
@@ -780,9 +781,11 @@
     border-radius: 10px;
     transition: 0.7s;
 }
-.playlist-items:hover audio{
+
+.playlist-items:hover audio {
     width: 100%;
 }
+
 .playlist-item-avt {
     width: 177px;
     height: 177px;
@@ -994,7 +997,6 @@
 
 .name-title {
     color: #DAFFFB;
-
     font-size: 13px;
     font-style: normal;
     font-weight: 600;
@@ -1003,15 +1005,74 @@
 
 .message-title {
     color: #DAFFFB;
-
     font-size: 13px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
 }
 
+.message-title::before {
+    content: "You:";
+}
 
+.time-title::before {
+    content: "-";
+    margin: 5px;
+}
 
+.block-chat {
+    height: 78vh;
+    border-radius: 10px;
+    position: relative;
+    margin: 2%;
+    border-radius: 10px;
+    border: 1px solid white;
+}
+
+.header-chat {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: 1px solid white;
+    margin: 2% 1% 2% 2%;
+    padding-bottom: 1%;
+
+}
+
+.main-chat {}
+
+.footer-chat {
+    width: 95%;
+    display: flex;
+    border-top: 1px solid white;
+    position: absolute;
+    bottom: 0;
+    margin: 0 3% 0 3%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.message-area {
+    width: 90%;
+    height: 5vh;
+    margin: 2% 1% 2% 2%;
+
+}
+
+.message-area input {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    font-size: 15px;
+    border-radius: 5px;
+}
+.send-message-btn{
+    margin: 2% 0 2% 2%;
+}
 
 
 
