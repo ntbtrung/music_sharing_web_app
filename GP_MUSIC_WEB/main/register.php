@@ -9,7 +9,6 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Fail to connect to sever: " . $conn->connect_error);
 }
-echo '<script>alert("Connect to sever complete")</script>';
 
 if (isset($_POST['btn-register'])) {
     $username = $_POST['username'];

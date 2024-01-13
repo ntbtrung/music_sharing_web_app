@@ -109,14 +109,13 @@
                 </div>
                 <div class="upload-body">
                     <form action="/uploadAvatar" enctype="multipart/form-data" method="post">
-                        <label>Avatar:</label>
-                        <input type="file" name="avatar" accept='image/*'>
-                        <input type="submit" value="Upload Avatar">
-                    </form>
-                    <form action="/uploadCoverPhoto" enctype="multipart/form-data" method="post">
-                        <label>Background:</label>
-                        <input type="file" name="coverPhoto" accept='image/*'>
-                        <input type="submit" value="Upload Cover Photo">
+                        <div><label>Avatar:</label>
+                            <input type="file" name="avatar" accept='image/*'>
+                        </div>
+                        <div><label>Background:</label>
+                            <input type="file" name="coverPhoto" accept='image/*'>
+                        </div>
+                        <input class="upload-file-btn" type="submit" value="Upload">
                     </form>
                 </div>
             </div>
@@ -156,53 +155,8 @@
                             <div class="menu-name p-0 col-2">Playlists</div>
                             <div class="menu-name p-0 col-2">Reports</div>
                         </div>
-                        <div class="track-frame-bar" >
+                        <div class="track-frame-bar">
                             <!-- <div class="sound-items">
-                                <div class="sound-item-avt"></div>
-                                <div class="sound-item-name">Đom Đóm</div>
-                                <div class="sound-item-singer">J97</div>
-                            </div>
-                            <div class="sound-items">
-                                <div class="sound-item-avt"></div>
-                                <div class="sound-item-name">Đom Đóm</div>
-                                <div class="sound-item-singer">J97</div>
-                            </div>
-                            <div class="sound-items">
-                                <div class="sound-item-avt"></div>
-                                <div class="sound-item-name">Đom Đóm</div>
-                                <div class="sound-item-singer">J97</div>
-                            </div>
-                            <div class="sound-items">
-                                <div class="sound-item-avt"></div>
-                                <div class="sound-item-name">Đom Đóm</div>
-                                <div class="sound-item-singer">J97</div>
-                            </div>
-                            <div class="sound-items">
-                                <div class="sound-item-avt"></div>
-                                <div class="sound-item-name">Đom Đóm</div>
-                                <div class="sound-item-singer">J97</div>
-                            </div>
-                            <div class="sound-items">
-                                <div class="sound-item-avt"></div>
-                                <div class="sound-item-name">Đom Đóm</div>
-                                <div class="sound-item-singer">J97</div>
-                            </div>
-                            <div class="sound-items">
-                                <div class="sound-item-avt"></div>
-                                <div class="sound-item-name">Đom Đóm</div>
-                                <div class="sound-item-singer">J97</div>
-                            </div>
-                            <div class="sound-items">
-                                <div class="sound-item-avt"></div>
-                                <div class="sound-item-name">Đom Đóm</div>
-                                <div class="sound-item-singer">J97</div>
-                            </div>
-                            <div class="sound-items">
-                                <div class="sound-item-avt"></div>
-                                <div class="sound-item-name">Đom Đóm</div>
-                                <div class="sound-item-singer">J97</div>
-                            </div>
-                            <div class="sound-items">
                                 <div class="sound-item-avt"></div>
                                 <div class="sound-item-name">Đom Đóm</div>
                                 <div class="sound-item-singer">J97</div>
@@ -243,6 +197,8 @@
                 }
             });
         });
+
+
     </script>
     <!-- scrip to upload-modal -->
     <script>

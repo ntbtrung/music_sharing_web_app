@@ -24,13 +24,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $uploadOk = 0;
         }
 
-        // Check the file size (limit to 10MB)
         if ($_FILES["file-music-upload"]["size"] > 10 * 1024 * 1024) {
             echo "<script>alert('File is too large, please choose a file smaller than 10MB.');</script>";
             $uploadOk = 0;
         }
 
-        // If everything is OK, try to upload the file
         if ($uploadOk == 0) {
             echo "<script>alert('Your file was not uploaded.');</script>";
         } else {
@@ -41,8 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             }
         }
     }
-
-    // Check if image file is uploaded
+    
     if (isset($_FILES["img-music-upload"])) {
         $targetDirImage = "assets/upload/avt-music/";
         $originalFileNameImage = $_FILES["img-music-upload"]["name"];
@@ -117,7 +114,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $musicUrl = "assets/upload/musics/" . $_FILES["file-music-upload"]["name"];
 
     // Execute the query to insert data into the 'song' table
-    $sql = "INSERT INTO song (name, genre, Artis, url, avatar_music_url) VALUES ('$songName', '', '$singerName', '$musicUrl', '$avatarMusicUrl')";
+    $sql = "INSERT INTO song (name, Artis, url, avatar_music_url) VALUES ('$songName','$singerName', '$musicUrl', '$avatarMusicUrl')";
 
     if ($conn->query($sql) === TRUE) {
         echo "<script>alert('Data inserted successfully.');</script>";
