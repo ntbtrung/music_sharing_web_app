@@ -16,53 +16,76 @@ const playRandom = document.querySelector(".play-random")
 const musics = [
     {
         id: 1,
-        name: "Anh Nho Ra",
-        singer: "Vũ.",
-        file: "Anh Nhớ Ra.mp3",
-        image:
-            "anh_nho_ra.jpg"
+        name: "Anh Nhớ Ra",
+        Artis: "Vũ",
+        url: "assets/library/musics-library/Anh Nhớ Ra.mp3",
+        avatar_music_url: "assets/library/avt-music-library/anh_nho_ra.jpg"
     },
     {
         id: 2,
-        name: "Bao Tien Mo Binh Yen",
-        singer: "14Cosper ft Bon",
-        file: "Bao Tiền.mp3",
-        image:
-            "bao_tien_mot_mo_binh_yen.jpg",
+        name: "Bao Tiền",
+        Artis: "14Cosper ft Bon",
+        url: "assets/library/musics-library/Bao Tiền.mp3",
+        avatar_music_url: "assets/library/avt-music-library/bao_tien_mot_mo_binh_yen.jpg"
     },
     {
         id: 3,
-        name: "Có em",
-        singer: "Madihu ft LowG",
-        file: "Có Em.mp3",
-        image:
-            "co_em.jpg"
+        name: "Có Em",
+        Artis: "Madihu ft LowG",
+        url: "assets/library/musics-library/Có Em.mp3",
+        avatar_music_url: "assets/library/avt-music-library/co_em.jpg"
     },
     {
         id: 4,
         name: "Thang Dien",
-        singer: "Justasuy ft AndreeLeftHand",
-        file: "Thang Dien.mp3",
-        image:
-            "thang_dien.jpg"
+        Artis: "Justatee ft Andree",
+        url: "assets/library/musics-library/Thang Dien.mp3",
+        avatar_music_url: "assets/library/avt-music-library/thang_dien.jpg"
     },
     {
         id: 5,
-        name: "Thich Em Hoi Nhieu",
-        singer: "Wren Evan",
-        file: "Thích Em Hơi Nhiều.mp3",
-        image:
-            "thich_em_hoi_nhieu.jpg"
+        name: "Thích Em Hơi Nhiều",
+        Artis: "Wren Evan",
+        url: "assets/library/musics-library/Thích Em Hơi Nhiều.mp3",
+        avatar_music_url: "assets/library/avt-music-library/thich_em_hoi_nhieu.jpg"
     },
     {
         id: 6,
-        name: "See you again",
-        singer: "Chalie Puth",
-        file: "See You Again.mp3",
-        image: "see_you_again.jpg"
+        name: "See You Again",
+        Artis: "Chalie Puth",
+        url: "assets/library/musics-library/See You Again.mp3",
+        avatar_music_url: "assets/library/avt-music-library/see_you_again.jpg"
     },
-
+    {
+        id: 7,
+        name: "Something Just Like This",
+        Artis: "Coldplay",
+        url: "assets/library/musics-library/Something Just Like This.mp3",
+        avatar_music_url: "assets/library/avt-music-library/something_just_like_this.jpg"
+    },
+    {
+        id: 8,
+        name: "Sugar",
+        Artis: "Marron 5",
+        url: "assets/library/musics-library/Sugar.mp3",
+        avatar_music_url: "assets/library/avt-music-library/sugar.jpg"
+    },
+    {
+        id: 9,
+        name: "What You Came For",
+        Artis: "Rihanna",
+        url: "assets/library/musics-library/This Is What You Came For.mp3",
+        avatar_music_url: "assets/library/avt-music-library/this_is_what_you_came_for.jpg"
+    },
+    {
+        id: 10,
+        name: "What Do You Mean",
+        Artis: "Justin Bieber",
+        url: "assets/library/musics-library/What Do You Mean.mp3",
+        avatar_music_url: "assets/library/avt-music-library/what_do_you_mean.jpg"
+    }
 ];
+
 // set to play a song and nex, prev button
 let isPlaying = true;
 let indexSong = 0;
@@ -171,6 +194,9 @@ song.addEventListener("ended", handleEndedSong);
 function handleEndedSong() {
     if (isRandom) {
         changeSong(-1);
+        changeSong(-1);
+        changeSong(-1);
+
         isPlaying = true;
         playPause();
     }
@@ -181,10 +207,10 @@ function handleEndedSong() {
 
 //set to change name , singer, avt music
 function init(indexSong) {
-    song.setAttribute('src', `assets/library/musics-library/${musics[indexSong].file}`);
+    song.setAttribute('src', `${musics[indexSong].url}`);
     musicName.textContent = musics[indexSong].name;
-    singerName.textContent = musics[indexSong].singer;
-    musicImage.setAttribute("src", `assets/library/avt-music-library/${musics[indexSong].image}`);
+    singerName.textContent = musics[indexSong].Artis;
+    musicImage.setAttribute("src", `${musics[indexSong].avatar_music_url}`);
 }
 init(indexSong);
 
@@ -193,5 +219,7 @@ let vol = document.querySelector("#volume-control");
 vol.addEventListener("input", function () {
     song.volume = vol.value / 100;
 });
+
+
 
 

@@ -30,7 +30,8 @@
                 </div>
                 <div class="search-box">
                     <span><img class="search-icon ml-2" src="assets/icons/Search.svg" onclick="searchMusic()"></span>
-                    <input type="search" class="search-place" id="searchInput" placeholder="Search in SOUNDHUB">
+                    <input type="search" class="search-place" id="searchInput"
+                        placeholder="Enter name of any song here">
                 </div>
             </li>
             <li class="navigation-bar2 p-0 col-4">
@@ -113,6 +114,7 @@
                     <div class="frame-title">Popular Playlist: </div>
                     <div class="frame-line" id="playlist-vpop">
                     </div>
+
                 </div>
                 <div class="frame-libraby">
                     <div class="frame-title">Music Videos</div>
@@ -179,18 +181,16 @@
             }
 
             function displaySearchResults(results) {
-                // Hiển thị gợi ý tìm kiếm trong một mục playlist
                 var playlistContainer = $('#searchResults');
                 playlistContainer.empty();
 
                 if (results.length > 0) {
-                    for (var i = 0; i < results.length; i++) {
+                    for (var i = 1; i < results.length; i++) {
                         playlistContainer.append(
-                            '<div class="playlist-items">' +
+                            '<div class="playlist-items" onclick="playMusic(' + results[i] + ')">' +
                             '<img src="' + results[i]['avatar_music_url'] + '" class="playlist-item-avt">' +
                             '<div class="playlist-item-name">' + results[i]['name'] + '</div>' +
                             '<div class="playlist-item-singer">' + results[i]['Artis'] + '</div>' +
-                            '<audio controls src="' + results[i]['url'] + '"></audio>' +
                             '</div>'
                         );
                     }
@@ -199,7 +199,13 @@
                 }
             }
 
+            function playMusic(songId) {
+                const selectedMusic = musics.find(music => music.id === songId);
+                indexSong = musics.indexOf(selectedMusic);
+                init(indexSong);
+                playPause();
 
+            }
         </script>
     </div>
 </body>
