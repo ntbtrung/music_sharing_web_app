@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 12, 2024 at 10:31 AM
+-- Generation Time: Jan 18, 2024 at 03:58 AM
 -- Server version: 10.4.28-MariaDB
--- PHP Version: 8.0.28
+-- PHP Version: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -54,12 +54,12 @@ CREATE TABLE `library` (
 
 INSERT INTO `library` (`id`, `name`, `Artis`, `url`, `avatar_music_url`) VALUES
 (1, 'Anh Nhớ Ra', 'Vũ', 'assets/library/musics-library/Anh Nhớ Ra.mp3', 'assets/library/avt-music-library/anh_nho_ra.jpg'),
-(2, 'Bao Tiền', '14Cosper ft Bon', 'assets/library/musics-library/Bao Tiền.mp3', 'assets/library/avt-music-library/bao_tien_mot_binh_yen.jpg'),
+(2, 'Bao Tiền', '14Cosper ft Bon', 'assets/library/musics-library/Bao Tiền.mp3', 'assets/library/avt-music-library/bao_tien_mot_mo_binh_yen.jpg'),
 (3, 'Có em', 'Madihu ft LowG', 'assets/library/musics-library/Có Em.mp3', 'assets/library/avt-music-library/co_em.jpg'),
 (4, 'Thằng điên', 'Justatee ft Andree', 'assets/library/musics-library/Thang Dien.mp3', 'assets/library/avt-music-library/thang_dien.jpg'),
 (5, 'Thích em hơi nhiều', 'Wren Evan', 'assets/library/musics-library/Thích Em Hơi Nhiều.mp3', 'assets/library/avt-music-library/thich_em_hoi_nhieu.jpg'),
 (6, 'See you again', 'Chalie Puth', 'assets/library/musics-library/See You Again.mp3', 'assets/library/avt-music-library/see_you_again.jpg'),
-(7, 'Somthing Just Like This', 'Coldplay', 'assets/library/musics-library/Something Just Like This.mp3', 'assets/library/avt-music-library/somthing_just_like_this.jpg'),
+(7, 'Something Just Like This', 'Coldplay', 'assets/library/musics-library/Something Just Like This.mp3', 'assets/library/avt-music-library/something_just_like_this.jpg'),
 (8, 'Sugar', 'Marron 5', 'assets/library/musics-library/Sugar.mp3', 'assets/library/avt-music-library/sugar.jpg'),
 (9, 'What You Came For', 'Rihanna', 'assets/library/musics-library/This Is What You Came For.mp3', 'assets/library/avt-music-library/this_is_what_you_came_for.jpg'),
 (10, 'What Do You Mean', 'Justin Bieber', 'assets/library/musics-library/What Do You Mean.mp3', 'assets/library/avt-music-library/what_do_you_mean.jpg');
@@ -96,7 +96,7 @@ CREATE TABLE `song` (
 --
 
 INSERT INTO `song` (`id`, `name`, `Artis`, `url`, `avatar_music_url`) VALUES
-(1, 'Vinh', 'ngu', 'assets/upload/musics/Ái nộ.mp3', 'assets/upload/avt-music/image.jpg');
+(2, 'sjfffff', 'fsjfjdjm', 'assets/upload/musics/Wherewestarted.mp3', 'assets/upload/avt-music/wallpaperflare.com_wallpaper (1).jpg');
 
 -- --------------------------------------------------------
 
@@ -114,6 +114,14 @@ CREATE TABLE `user` (
   `cover_photo` varchar(200) NOT NULL,
   `biography` varchar(500) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`id`, `username`, `password`, `nickname`, `email`, `avatar`, `cover_photo`, `biography`) VALUES
+(1, 'vinh123', 'f797402a7e526d8ca10713d1ebb72a24', '', 'vinh123@gmail.com', '', '', NULL),
+(2, '', '', '', '', '', '', NULL);
 
 --
 -- Indexes for dumped tables
@@ -169,13 +177,13 @@ ALTER TABLE `library`
 -- AUTO_INCREMENT for table `song`
 --
 ALTER TABLE `song`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

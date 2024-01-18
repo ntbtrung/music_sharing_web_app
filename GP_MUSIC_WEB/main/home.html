@@ -66,6 +66,102 @@
                 </div>
             </li>
         </ul>
+        <!-- bodybar -->
+        <div class="page-body-home m-0 row">
+            <div class="left-home col-3">
+            </div>
+            <div class="feed-home col-6">
+                <div class="status-frame col-10 mx-auto mt-5">
+                    <div class="post-box-1">
+                        <img src="assets/icons/intersect.svg" class="post-avatar">
+                        <input type="search" placeholder="What's on your mind?" class="post-input">
+                    </div>
+                    <div class="post-box-2">
+                        <div class="btn-post p-0 col-4" onclick="openmodal1()">
+                            <img src="assets/icons/Img_box_fill.svg" class="post-icon">
+                            <div class="post-text">Post a Status</div>
+                        </div>
+                        <div class="btn-post p-0 col-4" onclick="openmodal2()">
+                            <img src="assets/icons/Mic_fill.svg" class="post-icon">
+                            <div class="post-text">Upload File</div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="post-frame col-10 mx-auto mt-5"></div>
+            </div>
+            <div class="right-home col-3">
+            </div>
+        </div>
+
+        <!-- modal status here -->
+        <div class="modal-upload close-modal" id="modal1">
+            <form class="modal-upload-block" action="upload.php" enctype="multipart/form-data" method="post">
+                <div class="upload-header text-center my-3">
+                    <p>Share with us your music</p>
+                    <img class="close-btn" onclick="closemodal1()" src="assets/icons/close.svg" alt="">
+                </div>
+                <div class="upload-body">
+                    <div>
+                        <label for="caption-upload">Caption:</label>
+                        <input type="text" name="caption-upload" id="caption-upload">
+                    </div>
+                    <div>
+                        <label for="file-music-upload">Add more file:</label>
+                        <input type="file" name="file-music-upload" id="file-music-upload" accept=".mp3 " required>
+                    </div>
+                    <input type="submit" class="upload-file-btn" value="Upload">
+                </div>
+            </form>
+        </div>
+        <!-- modal upload here -->
+        <div class="modal-upload close-modal" id="modal2">
+            <form class="modal-upload-block" action="upload-music.php" enctype="multipart/form-data" method="post">
+                <div class="upload-header text-center my-3">
+                    <p>Share with us your music</p>
+                    <img class="close-btn" onclick="closemodal2()" src="assets/icons/close.svg" alt="">
+                </div>
+                <div class="upload-body">
+                    <div>
+                        <label for="img-music-upload">Avatar music:</label>
+                        <input type="file" name="img-music-upload" id="img-music-upload" accept=".jpg" required>
+                    </div>
+                    <div>
+                        <label for="song-name">Song:</label>
+                        <input type="text" name="song-name" id="song-name" required>
+                    </div>
+                    <div>
+                        <label for="singer-name">Singer/Artis:</label>
+                        <input type="text" name="singer-name" id="singer-name" required>
+                    </div>
+                    <div>
+                        <label for="file-music-upload">File music:</label>
+                        <input type="file" name="file-music-upload" id="file-music-upload" accept=".mp3" required>
+                    </div>
+                    <input type="submit" class="upload-file-btn" value="Upload">
+                </div>
+            </form>
+        </div>
+        <script>
+            var modal1 = document.querySelector('#modal1');
+            function openmodal1() {
+                modal1.setAttribute('class', 'modal-upload open-modal')
+            }
+            function closemodal1() {
+                modal1.setAttribute('class', 'modal-upload close-modal')
+            }
+        
+            var modal2 = document.querySelector('#modal2');
+            function openmodal2() {
+                modal2.setAttribute('class', 'modal-upload open-modal')
+            }
+            function closemodal2() {
+                modal2.setAttribute('class', 'modal-upload close-modal')
+            }
+        
+        </script>
+
+        <!-- music-bar here -->
         <div class="music-bar m-0 row">
             <div class="avt-bar col-4">
                 <div class="music-thumb">
@@ -99,71 +195,8 @@
             </div>
         </div>
         <script src="musicbar.js"></script>
-        <div class="modal-upload close-modal">
-            <form class="modal-upload-block" action="upload.php" enctype="multipart/form-data" method="post">
-                <div class="upload-header text-center my-3">
-                    <p>Share with us your music</p>
-                    <img class="close-btn" onclick="closemodal()" src="assets/icons/close.svg" alt="">
-                </div>
-                <div class="upload-body">
-                    <div>
-                        <label for="img-music-upload">Avatar music:</label>
-                        <input type="file" name="img-music-upload" id="img-music-upload" accept=".jpg" required>
-                    </div>
-                    <div>
-                        <label for="song-name">Song:</label>
-                        <input type="text" name="song-name" id="song-name" required>
-                    </div>
-                    <div>
-                        <label for="singer-name">Singer/Artis:</label>
-                        <input type="text" name="singer-name" id="singer-name" required>
-                    </div>
-                    <div>
-                        <label for="file-music-upload">File music:</label>
-                        <input type="file" name="file-music-upload" id="file-music-upload" accept=".mp3" required>
-                    </div>
-                    <input type="submit" class="upload-file-btn" value="Upload">
-                </div>
-            </form>
-        </div>
-        <!-- bodybar -->
-        <div class="page-body-home m-0 row">
-            <div class="left-home col-3">
-            </div>
-            <div class="feed-home col-6">
-                <div class="status-frame col-10 mx-auto mt-5">
-                    <div class="post-box-1">
-                        <img src="assets/icons/intersect.svg" class="post-avatar">
-                        <input type="search" placeholder="What's on your mind?" class="post-input">
-                    </div>
-                    <div class="post-box-2">
-                        <div class="btn-post p-0 col-4" onclick="openmodal()">
-                            <img src="assets/icons/Mic_fill.svg" class="post-icon">
-                            <div class="post-text">Post a Status</div>
-                        </div>
-                        <div class="btn-post p-0 col-4" onclick="openmodal()">
-                            <img src="assets/icons/Img_box_fill.svg" class="post-icon">
-                            <div class="post-text">Upload File</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="post-frame col-10 mx-auto mt-5"></div>
-            </div>
-            <div class="right-home col-3">
-            </div>
-        </div>
     </div>
 
 </body>
-<!-- scrip to upload-modal -->
-<script>
-    var modal = document.querySelector('.modal-upload');
-    function openmodal() {
-        modal.setAttribute('class','modal-upload open-modal')
-    }
-    function closemodal() {
-        modal.setAttribute('class','modal-upload close-modal')
-    }
-</script>
 
 </html>

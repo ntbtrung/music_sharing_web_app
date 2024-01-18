@@ -66,61 +66,6 @@
                 </div>
             </li>
         </ul>
-        <div class="music-bar m-0 row">
-            <div class="avt-bar col-4">
-                <div class="music-thumb">
-                    <img src="assets/icons/User_cicrle_duotone.svg" alt="">
-                </div>
-                <div class="song-title">
-                    <div class="music-name">There's no one at all</div>
-                    <p class="singer-name">MTP</p>
-                </div>
-            </div>
-            <div class="control-bar col-4">
-                <div class="control-button">
-                    <img class="control-icon play-random" src="assets/icons/random-off.svg" alt="">
-                    <img class="control-icon play-back" src="assets/icons/prev.svg" alt="">
-                    <img class="control-icon player-inner" src="assets/icons/continue.svg" alt="">
-                    <img class="control-icon play-forward" src="assets/icons/next.svg" alt="">
-                    <img class="control-icon play-repeat" src="assets/icons/repeat-off.svg" alt="">
-                </div>
-                <input type="range" name="range" id="range" class="range" />
-                <audio id="song" src="./assets/musics/memes.mp3"></audio>
-                <div class="timer">
-                    <div class="playtime">0:00</div>
-                    <div class="duration">9:99</div>
-                </div>
-            </div>
-            <div class="more-bar col-4">
-                <img class="more-icon" src="assets/icons/volume-up.svg" alt=""><input type="range" id="volume-control"
-                    class="range" value="30">
-                <img class="more-icon" src="assets/icons/download.svg" alt="">
-                <a href="musicpage.html"><img class="more-icon" src="assets/icons/zoom.svg" alt=""></a>
-            </div>
-        </div>
-        <script src="musicbar.js"></script>
-
-        <!--Modal Overlay-->
-        <div class="modal-upload close-modal">
-            <div class="modal-upload-block">
-                <div class="upload-header text-center my-3">
-                    <p>CUSTOMIZE YOUR PROFILE!</p>
-                    <img class="close-btn" onclick="closemodal()" src="assets/icons/close.svg" alt="">
-                </div>
-                <div class="upload-body">
-                    <form action="/uploadAvatar" enctype="multipart/form-data" method="post">
-                        <div><label>Avatar:</label>
-                            <input type="file" name="avatar" accept='image/*'>
-                        </div>
-                        <div><label>Background:</label>
-                            <input type="file" name="coverPhoto" accept='image/*'>
-                        </div>
-                        <input class="upload-file-btn" type="submit" value="Upload">
-                    </form>
-                </div>
-            </div>
-        </div>
-
         <!-- bodybar -->
         <div class="page-body-profile m-0 row">
             <div class="left-profile col-1"></div>
@@ -180,36 +125,91 @@
             </div>
             <div class="right-profile col-1 "></div>
         </div>
-    </div>
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script>
-        // Sử dụng jQuery để thực hiện AJAX và cập nhật danh sách nhạc
-        $(document).ready(function () {
-            $.ajax({
-                url: 'get_music.php',
-                type: 'GET',
-                dataType: 'html',
-                success: function (response) {
-                    $('.track-frame-bar').html(response);
-                },
-                error: function (error) {
-                    console.log('Error:', error);
-                }
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $.ajax({
+                    url: 'get_music.php',
+                    type: 'GET',
+                    dataType: 'html',
+                    success: function (response) {
+                        $('.track-frame-bar').html(response);
+                    },
+                    error: function (error) {
+                        console.log('Error:', error);
+                    }
+                });
             });
-        });
+        </script>
+
+        <!--Modal Overlay-->
+        <div class="modal-upload close-modal">
+            <div class="modal-upload-block">
+                <div class="upload-header text-center my-3">
+                    <p>CUSTOMIZE YOUR PROFILE!</p>
+                    <img class="close-btn" onclick="closemodal()" src="assets/icons/close.svg" alt="">
+                </div>
+                <div class="upload-body">
+                    <form action="upload-profile.php" enctype="multipart/form-data" method="post">
+                        <div><label for="avatar">Avatar:</label>
+                            <input type="file" name="avatar" id="avatar" accept='.jpg'>
+                        </div>
+                        <div><label for="cover_photo">Background:</label>
+                            <input type="file" name="cover_photo" id="cover_photo" accept='.jpg'>
+                        </div>
+                        <input class="upload-file-btn" type="submit" value="Upload">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <script>
+            var modal = document.querySelector('.modal-upload');
+            function openmodal() {
+                modal.setAttribute('class', 'modal-upload open-modal')
+            }
+            function closemodal() {
+                modal.setAttribute('class', 'modal-upload close-modal')
+            }
+        </script>
+
+        <!-- musicbar-here -->
+        <div class="music-bar m-0 row">
+            <div class="avt-bar col-4">
+                <div class="music-thumb">
+                    <img src="assets/icons/User_cicrle_duotone.svg" alt="">
+                </div>
+                <div class="song-title">
+                    <div class="music-name">There's no one at all</div>
+                    <p class="singer-name">MTP</p>
+                </div>
+            </div>
+            <div class="control-bar col-4">
+                <div class="control-button">
+                    <img class="control-icon play-random" src="assets/icons/random-off.svg" alt="">
+                    <img class="control-icon play-back" src="assets/icons/prev.svg" alt="">
+                    <img class="control-icon player-inner" src="assets/icons/continue.svg" alt="">
+                    <img class="control-icon play-forward" src="assets/icons/next.svg" alt="">
+                    <img class="control-icon play-repeat" src="assets/icons/repeat-off.svg" alt="">
+                </div>
+                <input type="range" name="range" id="range" class="range" />
+                <audio id="song" src="./assets/musics/memes.mp3"></audio>
+                <div class="timer">
+                    <div class="playtime">0:00</div>
+                    <div class="duration">9:99</div>
+                </div>
+            </div>
+            <div class="more-bar col-4">
+                <img class="more-icon" src="assets/icons/volume-up.svg" alt=""><input type="range" id="volume-control"
+                    class="range" value="30">
+                <img class="more-icon" src="assets/icons/download.svg" alt="">
+                <a href="musicpage.html"><img class="more-icon" src="assets/icons/zoom.svg" alt=""></a>
+            </div>
+        </div>
+        <script src="musicbar.js"></script>
+    </div>
 
 
-    </script>
-    <!-- scrip to upload-modal -->
-    <script>
-        var modal = document.querySelector('.modal-upload');
-        function openmodal() {
-            modal.setAttribute('class', 'modal-upload open-modal')
-        }
-        function closemodal() {
-            modal.setAttribute('class', 'modal-upload close-modal')
-        }
-    </script>
+
 
 </body>
 

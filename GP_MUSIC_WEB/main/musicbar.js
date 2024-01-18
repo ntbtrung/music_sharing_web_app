@@ -20,7 +20,7 @@ const musics = [
         singer: "Vũ.",
         file: "Anh Nhớ Ra.mp3",
         image:
-            "Anh_nho_ra.jpg"
+            "anh_nho_ra.jpg"
     },
     {
         id: 2,
@@ -28,7 +28,7 @@ const musics = [
         singer: "14Cosper ft Bon",
         file: "Bao Tiền.mp3",
         image:
-            "baotien.jpg",
+            "bao_tien_mot_mo_binh_yen.jpg",
     },
     {
         id: 3,
@@ -44,7 +44,7 @@ const musics = [
         singer: "Justasuy ft AndreeLeftHand",
         file: "Thang Dien.mp3",
         image:
-            "thangdien.jpg"
+            "thang_dien.jpg"
     },
     {
         id: 5,
@@ -52,7 +52,14 @@ const musics = [
         singer: "Wren Evan",
         file: "Thích Em Hơi Nhiều.mp3",
         image:
-            "thichem.jpg"
+            "thich_em_hoi_nhieu.jpg"
+    },
+    {
+        id: 6,
+        name: "See you again",
+        singer: "Chalie Puth",
+        file: "See You Again.mp3",
+        image: "see_you_again.jpg"
     },
 
 ];
@@ -174,10 +181,10 @@ function handleEndedSong() {
 
 //set to change name , singer, avt music
 function init(indexSong) {
-    song.setAttribute('src', `./assets/upload/musics/${musics[indexSong].file}`);
+    song.setAttribute('src', `assets/library/musics-library/${musics[indexSong].file}`);
     musicName.textContent = musics[indexSong].name;
     singerName.textContent = musics[indexSong].singer;
-    musicImage.setAttribute("src", `./assets/upload/avt-music/${musics[indexSong].image}`);
+    musicImage.setAttribute("src", `assets/library/avt-music-library/${musics[indexSong].image}`);
 }
 init(indexSong);
 

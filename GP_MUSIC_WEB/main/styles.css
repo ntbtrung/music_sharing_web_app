@@ -606,13 +606,21 @@
     justify-content: center;
     align-items: center;
     z-index: 1;
-    transition: 1s;
+    transition: 1.5s;
 
 }
 
 .modal-upload.close-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transition: 1s;
     opacity: 0;
-    transition: 0s;
 }
 
 .upload-header {
@@ -826,8 +834,7 @@
 .video-item-name {
     width: 177px;
     color: #DAFFFB;
-
-    font-size: 15px;
+    font-size: 14px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
@@ -837,7 +844,6 @@
 .video-item-singer {
     width: 177px;
     color: #DAFFFB;
-
     font-size: 14px;
     font-style: italic;
     font-weight: 400;
