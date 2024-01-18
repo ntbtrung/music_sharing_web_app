@@ -29,8 +29,8 @@
                     <a href="home.html"><img src="assets/icons/Logo.img.svg" alt=""></a>
                 </div>
                 <div class="search-box">
-                    <span><img class="search-icon ml-2" src="assets/icons/Search.svg"></span>
-                    <input type="search" class="search-place" placeholder="Search in SOUNDHUB">
+                    <span><img class="search-icon ml-2" src="assets/icons/Search.svg" onclick="searchMusic()"></span>
+                    <input type="search" class="search-place" id="searchInput" placeholder="Search in SOUNDHUB">
                 </div>
             </li>
             <li class="navigation-bar2 p-0 col-4">
@@ -104,6 +104,11 @@
             <div class="left-library col-3">
             </div>
             <div class="feed-library col-9">
+                <div class="frame-libraby" id="search-block">
+                    <div class="frame-title">Search Result: </div>
+                    <div class="frame-line" id="searchResults">
+                    </div>
+                </div>
                 <div class="frame-libraby">
                     <div class="frame-title">Popular Playlist: </div>
                     <div class="frame-line" id="playlist-vpop">
@@ -147,6 +152,54 @@
                     }
                 });
             });
+
+            function searchMusic() {
+                var searchTerm = document.getElementById("searchInput").value;
+                if (searchTerm.trim() === "") {
+                    alert("Please enter a name of music here");
+                } else {
+                    var search_block = document.querySelector('#search-block');
+                    search_block.setAttribute('class', 'frame-library open');
+                }
+                $.ajax({
+                    url: 'search_library.php',
+                    type: 'GET',
+                    data: { search: searchTerm },
+                    dataType: 'json',
+                    success: function (response) {
+                        // Hiển thị gợi ý tìm kiếm
+                        displaySearchResults(response);
+                    },
+                    error: function (error) {
+                        console.log('Error:', error);
+                    }
+                });
+
+
+            }
+
+            function displaySearchResults(results) {
+                // Hiển thị gợi ý tìm kiếm trong một mục playlist
+                var playlistContainer = $('#searchResults');
+                playlistContainer.empty();
+
+                if (results.length > 0) {
+                    for (var i = 0; i < results.length; i++) {
+                        playlistContainer.append(
+                            '<div class="playlist-items">' +
+                            '<img src="' + results[i]['avatar_music_url'] + '" class="playlist-item-avt">' +
+                            '<div class="playlist-item-name">' + results[i]['name'] + '</div>' +
+                            '<div class="playlist-item-singer">' + results[i]['Artis'] + '</div>' +
+                            '<audio controls src="' + results[i]['url'] + '"></audio>' +
+                            '</div>'
+                        );
+                    }
+                } else {
+                    playlistContainer.append('<p>No results found</p>');
+                }
+            }
+
+
         </script>
     </div>
 </body>
