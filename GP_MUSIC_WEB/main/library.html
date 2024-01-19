@@ -66,40 +66,7 @@
                     <a href="profile.html"><img src="assets/icons/User_cicrle_duotone.svg" class="nav-icon-3"></a>
                 </div>
             </li>
-        </ul>
-        <div class="music-bar m-0 row">
-            <div class="avt-bar col-4">
-                <div class="music-thumb">
-                    <img src="assets/icons/User_cicrle_duotone.svg" alt="">
-                </div>
-                <div class="song-title">
-                    <div class="music-name">There's no one at all</div>
-                    <p class="singer-name">MTP</p>
-                </div>
-            </div>
-            <div class="control-bar col-4">
-                <div class="control-button">
-                    <img class="control-icon play-random" src="assets/icons/random-off.svg" alt="">
-                    <img class="control-icon play-back" src="assets/icons/prev.svg" alt="">
-                    <img class="control-icon player-inner" src="assets/icons/continue.svg" alt="">
-                    <img class="control-icon play-forward" src="assets/icons/next.svg" alt="">
-                    <img class="control-icon play-repeat" src="assets/icons/repeat-off.svg" alt="">
-                </div>
-                <input type="range" name="range" id="range" class="range" />
-                <audio id="song" src="./assets/musics/memes.mp3"></audio>
-                <div class="timer">
-                    <div class="playtime">0:00</div>
-                    <div class="duration">9:99</div>
-                </div>
-            </div>
-            <div class="more-bar col-4">
-                <img class="more-icon" src="assets/icons/volume-up.svg" alt=""><input type="range" id="volume-control"
-                    class="range" value="30">
-                <img class="more-icon" src="assets/icons/download.svg" alt="">
-                <a href="musicpage.html"><img class="more-icon" src="assets/icons/zoom.svg" alt=""></a>
-            </div>
-        </div>
-        <script src="musicbar.js"></script>
+        </ul> 
         <!-- bodybar -->
         <div class="page-body-library m-0 row">
             <div class="left-library col-3">
@@ -163,13 +130,13 @@
                     var search_block = document.querySelector('#search-block');
                     search_block.setAttribute('class', 'frame-library open');
                 }
+
                 $.ajax({
                     url: 'search_library.php',
                     type: 'GET',
                     data: { search: searchTerm },
                     dataType: 'json',
                     success: function (response) {
-                        // Hiển thị gợi ý tìm kiếm
                         displaySearchResults(response);
                     },
                     error: function (error) {
@@ -185,9 +152,9 @@
                 playlistContainer.empty();
 
                 if (results.length > 0) {
-                    for (var i = 1; i < results.length; i++) {
+                    for (var i = 0; i < results.length; i++) {
                         playlistContainer.append(
-                            '<div class="playlist-items" onclick="playMusic(' + results[i] + ')">' +
+                            '<div class="playlist-items" onclick="playMusic(' + results[i]['id'] + ')">' +
                             '<img src="' + results[i]['avatar_music_url'] + '" class="playlist-item-avt">' +
                             '<div class="playlist-item-name">' + results[i]['name'] + '</div>' +
                             '<div class="playlist-item-singer">' + results[i]['Artis'] + '</div>' +
@@ -207,6 +174,41 @@
 
             }
         </script>
+
+        <!-- music bar -->
+        <div class="music-bar m-0 row">
+            <div class="avt-bar col-4">
+                <div class="music-thumb">
+                    <img src="assets/icons/User_cicrle_duotone.svg" alt="">
+                </div>
+                <div class="song-title">
+                    <div class="music-name">There's no one at all</div>
+                    <p class="singer-name">MTP</p>
+                </div>
+            </div>
+            <div class="control-bar col-4">
+                <div class="control-button">
+                    <img class="control-icon play-random" src="assets/icons/random-off.svg" alt="">
+                    <img class="control-icon play-back" src="assets/icons/prev.svg" alt="">
+                    <img class="control-icon player-inner" src="assets/icons/continue.svg" alt="">
+                    <img class="control-icon play-forward" src="assets/icons/next.svg" alt="">
+                    <img class="control-icon play-repeat" src="assets/icons/repeat-off.svg" alt="">
+                </div>
+                <input type="range" name="range" id="range" class="range" />
+                <audio id="song" src="./assets/musics/memes.mp3"></audio>
+                <div class="timer">
+                    <div class="playtime">0:00</div>
+                    <div class="duration">9:99</div>
+                </div>
+            </div>
+            <div class="more-bar col-4">
+                <img class="more-icon" src="assets/icons/volume-up.svg" alt=""><input type="range" id="volume-control"
+                    class="range" value="30">
+                <img class="more-icon" src="assets/icons/download.svg" alt="">
+                <a href="musicpage.html"><img class="more-icon" src="assets/icons/zoom.svg" alt=""></a>
+            </div>
+        </div>
+        <script src="musicbar.js"></script>
     </div>
 </body>
 

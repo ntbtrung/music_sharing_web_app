@@ -468,32 +468,24 @@
 /*------------------------------------------------------------------------*/
 
 .home-page {
-    /* background-color: #155c74; */
-    background-image: linear-gradient(to right bottom, #176b87, #176883, #176580, #16637c, #166079, #145b74, #13576e, #115269, #0e4b61, #0a4459, #073d52, #04364a);
+    background-color: #04364a;
     width: 100%;
     height: fit-content;
 }
 
 /* ------edit body for HOME PAGE */
 .page-body-home {
-    background-color: #155c74;
     width: 100%;
     height: fit-content;
 }
 
 /*left colum for HOME*/
 .left-home {
-    height: 92vh;
-    /* chi dung de show*/
-    background-color: #04364a;
-
+    height: fit-content;
 }
 
-/*feed colum for HOME*/
 .feed-home {
-    height: 92vh;
-    /* chi dung de show*/
-    /* height: fit-content; */
+    height: fit-content;
     background-color: #155c74;
 
 }
@@ -583,16 +575,13 @@
     background-color: #04364a;
     border-radius: 10px;
     overflow: hidden;
+    padding-bottom: 15%;
 
 }
 
 /*right colum for HOME*/
 .right-home {
-    height: 92vh;
-    /* chi dung de show*/
-    /* height: fit-content; */
-    background-color: #04364a;
-
+    height: fit-content;
 }
 
 .modal-upload.open-modal {
@@ -705,6 +694,50 @@
 
 .upload-file-btn:hover {
     background: white;
+}
+
+.post-item {
+    margin: 7%;
+    padding: 2%;
+    background-color: wheat;
+    border-radius: 10px;
+}
+
+.post-title-item {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid black;
+
+}
+
+.post-caption {
+    font-size: 13px;
+    font-style: italic;
+    font-weight: 400;
+}
+
+.post-main-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 2%;
+    border-bottom: 1px solid black;
+}
+
+.post-emotion-item {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2%;
+}
+
+.btn-emotion {
+    height: 10%;
+    width: 10%;
+    cursor: pointer;
+    position: relative;
+}
+.emotion-icon{
+
 }
 
 
@@ -853,7 +886,8 @@
 #search-block {
     display: none;
 }
-#search-block.open{
+
+#search-block.open {
     margin: 30px 35px 0 35px;
     display: flex;
     flex-direction: column;
@@ -1087,7 +1121,8 @@
     font-size: 15px;
     border-radius: 5px;
 }
-.send-message-btn{
+
+.send-message-btn {
     margin: 2% 0 2% 2%;
 }
 

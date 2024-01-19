@@ -88,7 +88,92 @@
                         </div>
                     </div>
                 </div>
-                <div class="post-frame col-10 mx-auto mt-5"></div>
+
+                <div class="post-frame col-10 mx-auto mt-5">
+                    <div class="post-item">
+                        <div class="post-title-item">
+                            <img src="assets/icons/intersect.svg" alt="" class="post-avatar">
+                            <div class="post-text" style="color: black;font-size: 14px;">Do Thanh Vinh
+                            </div>
+                        </div>
+                        <div class="post-main-item">
+                            <div class="post-caption">Welcome to SoundHub</div>
+                            <img src="assets/library/avt-music-library/bao_tien_mot_mo_binh_yen.jpg" alt=""
+                                class="post-img">
+                        </div>
+                        <div class="post-emotion-item">
+                            <div class="btn-emotion text-center">
+                                <img src="assets/icons/heart.svg" alt="" class="icon-emotion  heart-icon">
+                            </div>
+
+                            <div class="btn-emotion text-center">
+                                <img src="assets/icons/comment.svg" alt="" class="icon-emotion">
+                            </div>
+                            <div class="btn-emotion text-center">
+                                <img src="assets/icons/share.svg" alt="" class="icon-emotion">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post-item">
+                        <div class="post-title-item">
+                            <img src="assets/icons/intersect.svg" alt="" class="post-avatar">
+                            <div class="post-text" style="color: black;font-size: 14px;">Do Thanh Vinh
+                            </div>
+                        </div>
+                        <div class="post-main-item">
+                            <div class="post-caption">Welcome to SoundHub</div>
+                            <img src="assets/library/avt-music-library/bao_tien_mot_mo_binh_yen.jpg" alt=""
+                                class="post-img">
+                        </div>
+                        <div class="post-emotion-item">
+                            <div class="btn-emotion text-center">
+                                <img src="assets/icons/heart.svg" alt="" class="icon-emotion heart-icon">
+                            </div>
+
+                            <div class="btn-emotion text-center">
+                                <img src="assets/icons/comment.svg" alt="" class="icon-emotion">
+                            </div>
+                            <div class="btn-emotion text-center">
+                                <img src="assets/icons/share.svg" alt="" class="icon-emotion">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post-item">
+                        <div class="post-title-item">
+                            <img src="assets/icons/intersect.svg" alt="" class="post-avatar">
+                            <div class="post-text" style="color: black;font-size: 14px;">Do Thanh Vinh
+                            </div>
+                        </div>
+                        <div class="post-main-item">
+                            <div class="post-caption">Welcome to SoundHub</div>
+                            <img src="assets/library/avt-music-library/bao_tien_mot_mo_binh_yen.jpg" alt=""
+                                class="post-img">
+                        </div>
+                        <div class="post-emotion-item">
+                            <div class="btn-emotion text-center">
+                                <img src="assets/icons/heart.svg" alt="" class="icon-emotion heart-icon">
+                            </div>
+
+                            <div class="btn-emotion text-center">
+                                <img src="assets/icons/comment.svg" alt="" class="icon-emotion">
+                            </div>
+                            <div class="btn-emotion text-center">
+                                <img src="assets/icons/share.svg" alt="" class="icon-emotion">
+                            </div>
+                        </div>
+                    </div>
+                    <script>
+                        var heart = document.querySelectorAll('.heart-icon');
+                        for (var i = 0; i < heart.length; i++) {
+                            heart[i].addEventListener('click', function () {
+                                this.src = 'assets/icons/heart-fill.svg';
+                            });
+                            heart[i].addEventListener('dblclick', function () {
+                                this.src = 'assets/icons/heart.svg';
+                            });
+                        }
+                    </script>
+                </div>
             </div>
             <div class="right-home col-3">
             </div>
@@ -150,7 +235,7 @@
             function closemodal1() {
                 modal1.setAttribute('class', 'modal-upload close-modal')
             }
-        
+
             var modal2 = document.querySelector('#modal2');
             function openmodal2() {
                 modal2.setAttribute('class', 'modal-upload open-modal')
@@ -158,7 +243,7 @@
             function closemodal2() {
                 modal2.setAttribute('class', 'modal-upload close-modal')
             }
-        
+
         </script>
 
         <!-- music-bar here -->
