@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 18, 2024 at 07:14 AM
+-- Generation Time: Jan 23, 2024 at 08:33 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -67,15 +67,22 @@ INSERT INTO `library` (`id`, `name`, `Artis`, `url`, `avatar_music_url`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `post`
+-- Table structure for table `post_status`
 --
 
-CREATE TABLE `post` (
-  `id` int(10) UNSIGNED NOT NULL,
-  `song_id` int(10) UNSIGNED NOT NULL,
-  `author_id` int(10) UNSIGNED NOT NULL,
-  `text` varchar(500) DEFAULT NULL
+CREATE TABLE `post_status` (
+  `id` int(255) NOT NULL,
+  `caption` varchar(255) NOT NULL,
+  `image_url` varchar(255) NOT NULL,
+  `audio_url` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `post_status`
+--
+
+INSERT INTO `post_status` (`id`, `caption`, `image_url`, `audio_url`) VALUES
+(7, 'dm duc anh', 'assets/post/image/wallpaperflare.com_wallpaper (1).jpg', 'assets/post/audio/Wherewestarted.mp3');
 
 -- --------------------------------------------------------
 
@@ -90,6 +97,13 @@ CREATE TABLE `song` (
   `url` varchar(250) NOT NULL,
   `avatar_music_url` varchar(250) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `song`
+--
+
+INSERT INTO `song` (`id`, `name`, `Artis`, `url`, `avatar_music_url`) VALUES
+(4, 'adbda', 'fnsfnsf', 'assets/upload/musics/Wherewestarted.mp3', 'assets/upload/avt-music/wallpaperflare.com_wallpaper.jpg');
 
 -- --------------------------------------------------------
 
@@ -133,13 +147,10 @@ ALTER TABLE `library`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `post`
+-- Indexes for table `post_status`
 --
-ALTER TABLE `post`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `id` (`id`),
-  ADD KEY `post_song_id` (`song_id`),
-  ADD KEY `post_author_id` (`author_id`);
+ALTER TABLE `post_status`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `song`
@@ -166,10 +177,16 @@ ALTER TABLE `library`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
+-- AUTO_INCREMENT for table `post_status`
+--
+ALTER TABLE `post_status`
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
 -- AUTO_INCREMENT for table `song`
 --
 ALTER TABLE `song`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `user`

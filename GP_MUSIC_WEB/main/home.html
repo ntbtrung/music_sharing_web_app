@@ -90,7 +90,7 @@
                 </div>
 
                 <div class="post-frame col-10 mx-auto mt-5">
-                    <div class="post-item">
+                    <!-- <div class="post-item">
                         <div class="post-title-item">
                             <img src="assets/icons/intersect.svg" alt="" class="post-avatar">
                             <div class="post-text" style="color: black;font-size: 14px;">Do Thanh Vinh
@@ -113,65 +113,34 @@
                                 <img src="assets/icons/share.svg" alt="" class="icon-emotion">
                             </div>
                         </div>
-                    </div>
-                    <div class="post-item">
-                        <div class="post-title-item">
-                            <img src="assets/icons/intersect.svg" alt="" class="post-avatar">
-                            <div class="post-text" style="color: black;font-size: 14px;">Do Thanh Vinh
-                            </div>
-                        </div>
-                        <div class="post-main-item">
-                            <div class="post-caption">Welcome to SoundHub</div>
-                            <img src="assets/library/avt-music-library/bao_tien_mot_mo_binh_yen.jpg" alt=""
-                                class="post-img">
-                        </div>
-                        <div class="post-emotion-item">
-                            <div class="btn-emotion text-center">
-                                <img src="assets/icons/heart.svg" alt="" class="icon-emotion heart-icon">
-                            </div>
+                    </div> -->
 
-                            <div class="btn-emotion text-center">
-                                <img src="assets/icons/comment.svg" alt="" class="icon-emotion">
-                            </div>
-                            <div class="btn-emotion text-center">
-                                <img src="assets/icons/share.svg" alt="" class="icon-emotion">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="post-item">
-                        <div class="post-title-item">
-                            <img src="assets/icons/intersect.svg" alt="" class="post-avatar">
-                            <div class="post-text" style="color: black;font-size: 14px;">Do Thanh Vinh
-                            </div>
-                        </div>
-                        <div class="post-main-item">
-                            <div class="post-caption">Welcome to SoundHub</div>
-                            <img src="assets/library/avt-music-library/bao_tien_mot_mo_binh_yen.jpg" alt=""
-                                class="post-img">
-                        </div>
-                        <div class="post-emotion-item">
-                            <div class="btn-emotion text-center">
-                                <img src="assets/icons/heart.svg" alt="" class="icon-emotion heart-icon">
-                            </div>
-
-                            <div class="btn-emotion text-center">
-                                <img src="assets/icons/comment.svg" alt="" class="icon-emotion">
-                            </div>
-                            <div class="btn-emotion text-center">
-                                <img src="assets/icons/share.svg" alt="" class="icon-emotion">
-                            </div>
-                        </div>
-                    </div>
+                    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
                     <script>
-                        var heart = document.querySelectorAll('.heart-icon');
-                        for (var i = 0; i < heart.length; i++) {
-                            heart[i].addEventListener('click', function () {
+                        $(document).ready(function () {
+                            $.ajax({
+                                url: 'show_status.php',
+                                type: 'GET',
+                                dataType: 'html',
+                                success: function (response) {
+                                    $('.post-frame').html(response);
+                                },
+                                error: function (error) {
+                                    console.log('Error:', error);
+                                }
+                            });
+                        });
+                    </script>
+                    <script>
+                        document.addEventListener('DOMContentLoaded', function () {
+                            $('.post-frame').on('click', '.heart-icon', function () {
                                 this.src = 'assets/icons/heart-fill.svg';
                             });
-                            heart[i].addEventListener('dblclick', function () {
+
+                            $('.post-frame').on('dblclick', '.heart-icon', function () {
                                 this.src = 'assets/icons/heart.svg';
                             });
-                        }
+                        });
                     </script>
                 </div>
             </div>
@@ -181,7 +150,7 @@
 
         <!-- modal status here -->
         <div class="modal-upload close-modal" id="modal1">
-            <form class="modal-upload-block" action="upload.php" enctype="multipart/form-data" method="post">
+            <form class="modal-upload-block" action="upload-post.php" enctype="multipart/form-data" method="post">
                 <div class="upload-header text-center my-3">
                     <p>Share with us your music</p>
                     <img class="close-btn" onclick="closemodal1()" src="assets/icons/close.svg" alt="">
@@ -192,8 +161,12 @@
                         <input type="text" name="caption-upload" id="caption-upload">
                     </div>
                     <div>
-                        <label for="file-music-upload">Add more file:</label>
-                        <input type="file" name="file-music-upload" id="file-music-upload" accept=".mp3 " required>
+                        <label for="file-music-upload">Add img:</label>
+                        <input type="file" name="img-post-upload" id="img-post-upload" accept=".jpg " required>
+                    </div>
+                    <div>
+                        <label for="file-music-upload">Add audio:</label>
+                        <input type="file" name="music-post-upload" id="music-post-upload" accept=".mp3" required>
                     </div>
                     <input type="submit" class="upload-file-btn" value="Upload">
                 </div>
