@@ -13,17 +13,17 @@
     }
 
     ::-webkit-scrollbar-track {
-        background-color: #176b87;
+        background-color: black;
         border-radius: 5px;
     }
 
     ::-webkit-scrollbar-thumb {
-        box-shadow: inset 0 0 5px rgba(255, 255, 255, 1);
+        box-shadow: inset 0 0 3px rgba(255, 255, 255, 1);
         border-radius: 5px;
     }
 
     audio::-webkit-media-controls-panel {
-        background-color: #176b87;
+        background-color: whitesmoke;
     }
 
     audio::-webkit-media-controls-timeline {
@@ -38,7 +38,8 @@
 .navigation-bar {
     width: 100%;
     height: 8vh;
-    background-color: #04364a;
+    background-color: black;
+    border-bottom: 1px solid gray;
 
 }
 
@@ -58,11 +59,12 @@
     width: fit-content;
     height: 42px;
     border-radius: 20px;
-    background-color: #176b87;
+    background-color: #3d3d3d;
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 1px solid gray;
 }
 
 .search-icon {
@@ -72,14 +74,13 @@
 }
 
 .search-place {
-    background-color: #176B87;
+    background-color: #3d3d3d;
     border: 0px;
     overflow: hidden;
-
     width: 100%;
     outline: none;
     font-weight: 400;
-    color: #dafffb80;
+    color: white;
     font-size: 13px;
 }
 
@@ -97,6 +98,7 @@
     justify-content: center;
     align-items: center;
     border-radius: 10px;
+    background-color: black;
 }
 
 .nav-btn-1:hover {
@@ -106,7 +108,8 @@
     justify-content: center;
     align-items: center;
     border-radius: 10px;
-    background-color: #155c74;
+    background-color: #3d3d3d;
+    border: 1px solid white;
 }
 
 .active {
@@ -116,8 +119,9 @@
     justify-content: center;
     align-items: center;
     border-radius: 10px;
-    background-color: #155c74;
-    border: 1px solid black;
+    border: 1px solid gray;
+    background-color: #3d3d3d;
+
 }
 
 .nav-icon {
@@ -140,11 +144,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 .nav-icon-2 {
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
     cursor: pointer;
 }
 
@@ -156,18 +161,12 @@
     cursor: pointer;
 }
 
-.nav-icon-3 {
-    width: 54px;
-    height: 54px;
-    cursor: pointer;
-}
-
 
 /* --------------------------edit music bar for ALL PAGE       */
 /*---------------------------------------------------------*/
 
 .music-bar {
-    background-color: #000000;
+    background-color: #282828;
     position: fixed;
     top: 90vh;
     height: 10vh;
@@ -281,8 +280,7 @@
 /*------------------------------------------------------------------------*/
 
 .login-page {
-    background-image: linear-gradient(to right bottom, #acd7ec, #9fc9e2, #92bcd9, #87aecf, #7ca1c5, #7499c0, #6c91bb, #6489b6, #5b84b6, #527fb5, #487ab5, #3e75b4);
-    background-position: center;
+    background-image: linear-gradient(to right top, #e2f2fc, #bbdef3, #93c9ea, #66b5e1, #1ea1d9);
     background-size: cover;
     height: 100vh;
     width: 100%;
@@ -468,7 +466,8 @@
 /*------------------------------------------------------------------------*/
 
 .home-page {
-    background-color: #04364a;
+    background: #000000;
+    height: fit-content;
     width: 100%;
     height: fit-content;
 }
@@ -486,15 +485,17 @@
 
 .feed-home {
     height: fit-content;
-    background-color: #155c74;
+    background: #1b1b1b;
+
 
 }
 
 .status-frame {
     height: max-content;
-    background-color: #04364a;
+    background-color: #000000;
     border-radius: 10px;
     overflow: hidden;
+    border: 1px solid gray;
 }
 
 .post-box-1 {
@@ -503,15 +504,15 @@
     overflow: hidden;
     padding: 0.5em;
     border-radius: 20px;
-    background: #176B87;
+    background-color: #3d3d3d;
     align-items: center;
     gap: 10px;
     margin: 1em 1em 2em 1em;
 }
 
 .post-avatar {
-    width: 36px;
-    height: 36px;
+    width: 30px;
+    height: 30px;
     cursor: pointer;
 }
 
@@ -538,7 +539,7 @@
     height: 36px;
     overflow: hidden;
     border-radius: 8px;
-    background: #04364A;
+    background: #3d3d3d;
     flex-shrink: 0;
     display: inline-flex;
     justify-content: center;
@@ -550,8 +551,9 @@
     height: 36px;
     overflow: hidden;
     border-radius: 8px;
-    background: #176B87;
+    background: #3d3d3d;
     flex-shrink: 0;
+    border: 1px solid gray;
 }
 
 .post-icon {
@@ -562,7 +564,6 @@
 .post-text {
     flex-shrink: 0;
     color: #DAFFFB;
-
     font-size: 11px;
     font-style: normal;
     font-weight: 500;
@@ -572,10 +573,12 @@
 
 .post-frame {
     height: max-content;
-    background-color: #04364a;
+    background-color: #000000;
     border-radius: 10px;
     overflow: hidden;
     padding-bottom: 15%;
+    border: 1px solid gray;
+
 
 }
 
@@ -621,7 +624,7 @@
 .modal-upload-block {
     width: max-content;
     height: fit-content;
-    background-image: linear-gradient(to right bottom, #acd7ec, #9fc9e2, #92bcd9, #87aecf, #7ca1c5, #7499c0, #6c91bb, #6489b6, #5b84b6, #527fb5, #487ab5, #3e75b4);
+    background-color: #e7e7e7;
     border-radius: 10px;
     overflow: hidden;
     animation: showModal linear 0.2s;
@@ -659,7 +662,7 @@
     outline: none;
     border: none;
     background-color: transparent;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid rgb(0, 0, 0);
 }
 
 .upload-body div label {
@@ -680,26 +683,28 @@
 .upload-file-btn {
     justify-content: center;
     display: flex;
-    height: 20%;
-    width: 20%;
+    height: 25%;
+    width: 25%;
     margin: 0 auto;
-    border: 1px solid white;
+    border: 1px solid rgb(0, 0, 0);
     border-radius: 5px;
     align-items: center;
     background: transparent;
     cursor: pointer;
+    margin-top: 2%;
     margin-bottom: 10%;
+    padding: 1%;
 
 }
 
 .upload-file-btn:hover {
-    background: white;
+    background: #a5a5a5;
 }
 
 .post-item {
     margin: 7%;
     padding: 2%;
-    background-color: wheat;
+    background-color: whitesmoke;
     border-radius: 10px;
 }
 
@@ -746,7 +751,7 @@
 
 .post-main-item {
     audio::-webkit-media-controls-panel {
-        background-color: wheat;
+        background-color: whitesmoke;
     }
 
     audio::-webkit-media-controls-timeline {
@@ -760,14 +765,13 @@
 /*------------------------------------------------------------------------*/
 
 .library-page {
-    background-color: #155c74;
+    background-color: black;
     width: 100%;
     height: fit-content;
 }
 
 /* ------edit body for LIBRARY PAGE */
 .page-body-library {
-    background-color: #04364a;
     width: 100%;
     height: fit-content;
 }
@@ -775,17 +779,12 @@
 /*left colum for LIBRARY*/
 .left-library {
     height: fit-content;
-    /* chi dung de show*/
-    /* height: fit-content; */
-
 }
 
 /*feed colum for LIBRARY*/
 .feed-library {
     height: fit-content;
-    /* chi dung de show*/
-    /* height: fit-content; */
-    background-color: #155c74;
+    background-color: #1d1d1d;
     padding-bottom: 10%;
 
 }
@@ -834,7 +833,7 @@
     margin-right: 20px;
     margin-left: 20px;
     border: 1px solid white;
-    background: #04364A;
+    background: #3d3d3d;
     border-radius: 10px;
     transition: 0.7s;
 }
@@ -847,7 +846,7 @@
     width: 177px;
     height: 177px;
     border-radius: 10px;
-    background: #04364A;
+    background: #3d3d3d;
 }
 
 .video-items {
@@ -865,7 +864,7 @@
     margin-right: 20px;
     margin-left: 20px;
     border: 1px solid white;
-    background: #04364A;
+    background: #3d3d3d;
     border-radius: 10px;
     transition: 0.7s;
 }
@@ -874,7 +873,7 @@
     width: 310px;
     height: 177px;
     border-radius: 10px;
-    background: #04364A;
+    background: #3d3d3d;
 }
 
 .playlist-item-name,
@@ -914,19 +913,19 @@
 /*------------------------------------------------------------------------*/
 
 .noti-bg {
-    background-color: #155c74;
+    background-color: #000000;
     width: 100%;
     height: fit-content
 }
 
 .right-noti {
     height: 92vh;
-    background-color: #155c74;
+    background-color: #242323;
 }
 
 .main-noti {
     height: 92vh;
-    background-color: #04364a;
+    background-color: #000000;
 }
 
 .noti-frame {
@@ -936,15 +935,16 @@
 
 .noti-title {
     font-size: 50px;
-    color: #DAFFFB;
+    color: #ffffff;
 }
 
 .notification {
     border-radius: 10px;
     padding: 10px;
     margin-bottom: 5px;
-    background-color: #0c485c;
+    background-color: #3b3b3b;
     color: #ffffff;
+    width: 90%;
 }
 
 .more-noti {
@@ -954,8 +954,8 @@
 
 .notification:hover {
     border-radius: 10px;
-    background: #176B87;
     cursor: pointer;
+    border: 1px solid white;
 }
 
 
@@ -979,8 +979,12 @@
 .left-chat {
     /* chi dung de show*/
     height: 92vh;
-    background-color: #04364a;
+    background-color: black;
 
+}
+.feed-chat{
+    height: 92vh;
+    background-color: #3b3b3b;
 }
 
 .search-frame-chat-1 {
@@ -1019,18 +1023,21 @@
     height: 40px;
     overflow: hidden;
     border-radius: 20px;
-    background: #176B87;
+    background: #3d3d3d;
     justify-content: center;
     align-items: center;
     outline: none;
+    color: #ffffff;
+
 }
 
 .search-box-chat {
     outline: none;
-    background-color: #176b87;
+    background-color: #3d3d3d;
     width: 80%;
     border: none;
-    color: #DAFFFB80;
+    color: #ffffff;
+
 }
 
 .show-frame-chat {
@@ -1046,12 +1053,14 @@
 .show-chat-items:hover {
     display: flex;
     border-radius: 10px;
-    background: #176B87;
+    background: #3d3d3d;
 }
 
 .avatar-icon {
-    display: block;
+    display: flex;
     padding: 10px;
+    justify-content: center;
+    align-items: center;
 }
 
 .main-message {
@@ -1148,35 +1157,31 @@
 
 
 .profile-page {
-    background-color: #155c74;
+    background-color: black;
     width: 100%;
     height: fit-content;
 }
 
 .page-body-profile {
-    background-color: #155c74;
     width: 100%;
     height: fit-content;
+    background-color: #1b1b1b;
 }
 
 .left-profile {
     height: 92vh;
-    /* chi dung de show*/
-    /* height: fit-content; */
-    background-color: #155c74;
 
 }
 
 .feed-profile {
     height: fit-content;
-    background-color: #155c74;
 
 }
 
 .profile-frame {
     width: 100%;
     height: 30vh;
-    background-color: #04364a;
+    background-color: #2d2d2d;
     border-radius: 0px 0px 10px 10px;
     position: relative;
 }
@@ -1271,13 +1276,14 @@
 
 .track-frame {
     height: fit-content;
-    background-color: #176b87;
+    background-color: #3b3b3b;
     border-radius: 10px;
+    height: 44vh;
 }
 
 .menu-frame-bar {
-    background-color: #04364a;
-    height: 60px;
+    background-color: #0e0e0e;
+    height: 7vh;
     border-radius: 10px;
     display: flex;
     justify-content: center;
@@ -1286,7 +1292,6 @@
 
 .menu-name {
     text-align: center;
-
     font-weight: 400;
     font-size: 15px;
     letter-spacing: 0;
@@ -1296,7 +1301,6 @@
 
 .menu-name:hover {
     text-align: center;
-
     font-weight: 500;
     color: #00ffed;
     font-size: 15px;
@@ -1306,11 +1310,16 @@
 }
 
 .track-frame-bar {
-    background-color: #176b87;
     text-align: center;
-    height: 37vh;
-    overflow-y: scroll;
+    height: 35vh;
     border-radius: 10px;
+    overflow-y: scroll;
+
+}
+
+.track-frame-bar::-webkit-scrollbar-track {
+    background-color: #3b3b3b;
+    border-radius: 5px;
 }
 
 .noti-track {
@@ -1353,16 +1362,14 @@
 
 .info-frame {
     height: 44vh;
-    /* chi dung de show*/
-    /* height: fit-content; */
-    background-color: #176b87;
+    background-color: #3b3b3b;
     border-radius: 10px;
     float: left;
 }
 
 .show-info {
     height: 60px;
-    background-color: #04364a;
+    background-color: #0e0e0e;
     border-radius: 10px;
     display: flex;
     justify-content: space-around;
@@ -1372,7 +1379,7 @@
 .info-title {
 
     font-weight: 500;
-    color: #dafffb;
+    color: #ffffff;
     font-size: 12px;
     letter-spacing: 0;
     line-height: normal;
@@ -1382,19 +1389,14 @@
 .info-number {
 
     font-weight: 500;
-    color: #dafffb;
+    color: #ffffff;
     font-size: 20px;
     letter-spacing: 0;
     line-height: normal;
     text-align: left;
 }
 
-.right-profile {
-    /* chi dung de show*/
-    /* height: fit-content; */
-    background-color: #155c74;
 
-}
 
 .upload-body {
     display: flex;
@@ -1403,14 +1405,15 @@
 }
 
 .sound-items {
+    background-color: whitesmoke;
     display: flex;
     flex-direction: row;
     align-items: center;
     margin: 1%;
+    border-radius: 5px;
 }
 
 .sound-items:hover {
-    background-color: #3595b5;
     border-radius: 5px;
 }
 
@@ -1420,20 +1423,23 @@
     height: 60px;
     width: 60px;
     border-radius: 5px;
-    margin-right: 10%;
+    margin-right: 5%;
 
 }
 
 .sound-item-name {
-    font-weight: 500;
-    font-size: 16px;
+    font-weight: 400;
+    font-size: 15px;
+    color: rgb(0, 0, 0);
 }
 
 .sound-item-singer {
-    font-weight: 500;
-    font-size: 16px;
+    font-weight: 400;
+    font-size: 15px;
     font-style: italic;
     margin-right: 10%;
+    color: rgb(0, 0, 0);
+
 }
 
 .sound-item-singer::before {
@@ -1445,27 +1451,28 @@
 
 
 .sound-items audio {
-    width: 0px;
+    width: 45%;
+    position: absolute;
+    right: 3%;
+}
+.sound-items:hover {
+    border-radius: 5px;
 }
 
-.sound-items:hover audio {
-    width: 45%;
-    transition: 0.7s;
-    transition-delay: 0.2s;
-}
+
 
 /*--------------------------------------ABOUT US PAGE ---------------------*/
 /*------------------------------------------------------------------------*/
 
 .abt-bg {
-    background-color: #155c74;
+    background-color: black;
     width: 100%;
     height: fit-content;
 }
 
 .main-abt {
     height: auto;
-    background-color: #04364a;
+    background-color: #3b3b3b;
 }
 
 ol li {
@@ -1506,7 +1513,7 @@ ol li {
 /*------------------------------------------------------------------------*/
 
 .legal-bg {
-    background-color: #155c74;
+    background-color: black;
     width: 100%;
     height: fit-content;
 }
@@ -1514,7 +1521,7 @@ ol li {
 
 .main-legal {
     height: fit-content;
-    background-color: #04364a;
+    background-color: #3b3b3b;
 }
 
 .legal-frame {
